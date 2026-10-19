@@ -15,10 +15,13 @@
 set -eu
 
 # ---- paths -----------------------------------------------------------------
+# STOCK and WORK default to the real device paths. They can be overridden by the
+# environment so the script can be dry-run or tested on a workstation without
+# touching the real locations; the device never sets them, so the defaults apply.
 HERE=$(cd "$(dirname "$0")" && pwd)
-STOCK="/usr/bin/MPC Sample"          # launched by /usr/bin/launch-ac50
+STOCK="${MPC_STOCK:-/usr/bin/MPC Sample}"   # launched by /usr/bin/launch-ac50
 PATCH_LIST="$HERE/patches.list"       # produced by: mpcpatch.py emit-device
-WORK="/tmp/mpc-mod"                   # tmpfs - gone on reboot
+WORK="${MPC_WORK:-/tmp/mpc-mod}"            # tmpfs - gone on reboot
 OUT="$WORK/MPC-Sample-patched"
 PENDING="$HERE/.pending"              # crash-guard marker, lives on the SD
 MAX_FAILS=2                           # after this many bad attempts, stop trying
@@ -82,8 +85,8 @@ fi
 chmod +x "$OUT"
 
 # ---- activate --------------------------------------------------------------
-# Bind-mount the patched copy over the stock path, then restart the app service.
-# This lives only in RAM: a reboot drops the mount and you are back on stock.
+# Bind-mount the patched copy over the stock path. This lives only in RAM: a
+# reboot drops the mount and you are back on stock.
 #
 # TODO: confirm these on your unit (needs a root shell):
 #   - the rootfs allows a bind-mount over "$STOCK" (it does on a read-only
@@ -92,14 +95,27 @@ chmod +x "$OUT"
 log "activating patched app (bind-mount, RAM-only)"
 mount --bind "$OUT" "$STOCK" || die "bind-mount failed (need root). Nothing changed on flash."
 
+# The point of no return is now BEHIND us: the bind-mount is in place and is fully
+# reversible by a reboot or rollback.sh. Clear the crash guard and record success
+# *before* restarting the app, not after. Static RE of fw 1.3.0.12 says this
+# script runs under az01-script-runner's cgroup (it is run by that root daemon via
+# system()), not ac50's, so `systemctl restart ac50` should not kill us. But if
+# that ever turns out wrong on a given unit, a restart that kills us here must not
+# be able to strand a .pending marker - that would make the NEXT run read this
+# success as a failure and, after MAX_FAILS, refuse to run at all. So: clear and
+# log done first, then restart.
+rm -f "$PENDING"
+log "done. Reboot (or run rollback.sh) to return to stock."
+
+# Kick the app so it re-execs through the bind-mounted path. Best-effort: by now
+# activation is already complete and logged, so it is fine if this does not return
+# (e.g. if we do share ac50's cgroup after all - we would be killed, having already
+# cleared .pending and logged success).
 if command -v systemctl >/dev/null 2>&1; then
-    systemctl restart ac50.service || die "could not restart ac50.service"
+    systemctl restart ac50.service \
+        || log "WARN: could not restart ac50.service - relaunch the app or reboot to pick up the change"
 else
     # Fallback: ac50.service has Restart=always, so killing the app relaunches
     # it - now through the bind-mounted (patched) path.
     pkill -f "/usr/bin/MPC Sample" || true
 fi
-
-# Success: clear the crash guard so the next boot starts clean.
-rm -f "$PENDING"
-log "done. Reboot (or run rollback.sh) to return to stock."

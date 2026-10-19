@@ -22,7 +22,8 @@ feature that scans an inserted SD card for a script and asks on-screen
 user confirms, and the script swaps in a patched copy for the current boot only.
 
 ```
-patches/1.3.0.12.json   <- offsets + bytes YOU change, + stock/result SHA-256
+patches/1.3.0.12.json              <- offsets + bytes YOU change, + stock/result SHA-256
+patches/1.3.0.12-phase2-clone.json <- zero patches: clone + bind-mount only (phase 2)
         |  mpcpatch.py emit-device
         v
 sdcard/mpc-mod/patches.list   <- flat list the on-device applier reads
@@ -47,6 +48,25 @@ sdcard/mpc-mod/rollback.sh     <- drop the override (reboot does this too)
   backs off and leaves stock running, so a bad patch can't cause a boot loop.
 - **Out of scope on purpose:** this does not remove code signing and does not
   touch license/activation checks for paid plugins or expansions.
+
+## Phase 2: prove the loop with a clone first
+
+Before any real patch, validate the whole activation + rollback loop with an
+**unmodified** copy. `patches/1.3.0.12-phase2-clone.json` has **zero patches**, so
+`apply.sh` just clones the stock binary into RAM and bind-mounts the identical copy
+over it, then restarts. The running app is byte-for-byte stock, so this proves code
+execution (the "Do you want to run it?" path), the bind-mount, and that
+`rollback.sh`/reboot restore stock — without changing a single byte of the app.
+
+```bash
+tools/mpcpatch.py emit-device patches/1.3.0.12-phase2-clone.json -o sdcard/mpc-mod/patches.list
+```
+
+`apply.sh` clears its `.pending` crash-guard marker and logs success **before** the
+service restart, so even if the restart were to kill the script it can never strand
+a marker and make the next run read a success as a failure. For dry-running or
+testing off-device, `MPC_STOCK` and `MPC_WORK` override the stock path and the RAM
+work dir (the device sets neither, so the real paths apply there).
 
 ## Workflow (host)
 
@@ -110,8 +130,11 @@ python3 -m pytest tests/ -q
 ```
 
 Tests cover the applier's guards (hash/size gate, original-byte check, length and
-overlap rules, in-place refusal, device-list round-trip). They use synthetic
-blobs — no hardware or vendor binary required.
+overlap rules, in-place refusal, device-list round-trip), the phase-2 clone set
+(zero active patches, result == target, header-only device list), and `apply.sh`
+itself run under the host shell with command shims — including that it clears
+`.pending` before the restart. They use synthetic blobs — no hardware or vendor
+binary required. (Default Python has no `pytest`; use a throwaway venv.)
 
 ## Status
 
