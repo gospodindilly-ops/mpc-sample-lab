@@ -1,0 +1,96 @@
+[ 6579.150162] mpc-sample systemd[1]: Starting /run/mpc-sound-test...
+[ 6579.534738] mpc-sample systemd[1]: Started /run/mpc-sound-test.
+[ 6579.546442] mpc-sample mpc-sound-test[3218]: I2S card 2
+[ 6579.548874] mpc-sample mpc-sound-test[3218]: Builtin Speaker Switch     on
+[ 6579.548874] mpc-sample mpc-sound-test[3218]: Builtin Microphone Switch  off
+[ 6579.548874] mpc-sample mpc-sound-test[3218]: TRS Switch                 off
+[ 6579.548874] mpc-sample mpc-sound-test[3218]: Headphones Jack            off
+[ 6579.548874] mpc-sample mpc-sound-test[3218]: Line Out Jack              off
+[ 6579.548874] mpc-sample mpc-sound-test[3218]: fb0 320x240, 32 bpp, line 1280 bytes
+[ 6579.548874] mpc-sample mpc-sound-test[3218]: hit pads, Ctrl-C to quit
+[ 6630.368658] mpc-sample mpc-sound-test[3218]: pad 1  velocity 127
+[ 6630.754690] mpc-sample mpc-sound-test[3218]: pad 1  velocity 127
+[ 6630.981053] mpc-sample mpc-sound-test[3218]: pad 1  velocity 127
+[ 6631.181419] mpc-sample mpc-sound-test[3218]: pad 1  velocity 127
+[ 6631.375811] mpc-sample mpc-sound-test[3218]: pad 1  velocity 127
+[ 6632.075312] mpc-sample mpc-sound-test[3218]: pad 1  velocity  77
+[ 6632.371422] mpc-sample mpc-sound-test[3218]: pad 1  velocity  53
+[ 6632.638420] mpc-sample mpc-sound-test[3218]: pad 1  velocity  49
+[ 6632.882182] mpc-sample mpc-sound-test[3218]: pad 1  velocity  53
+[ 6633.111500] mpc-sample mpc-sound-test[3218]: pad 1  velocity  29
+[ 6633.361115] mpc-sample mpc-sound-test[3218]: pad 2  velocity  95
+[ 6633.561388] mpc-sample mpc-sound-test[3218]: pad 2  velocity  93
+[ 6633.741347] mpc-sample mpc-sound-test[3218]: pad 2  velocity 100
+[ 6633.993835] mpc-sample mpc-sound-test[3218]: pad 3  velocity  89
+[ 6634.179628] mpc-sample mpc-sound-test[3218]: pad 3  velocity  95
+[ 6634.417703] mpc-sample mpc-sound-test[3218]: pad 4  velocity 127
+[ 6634.629467] mpc-sample mpc-sound-test[3218]: pad 4  velocity  85
+[ 6634.864612] mpc-sample mpc-sound-test[3218]: pad 4  velocity  90
+[ 6635.056171] mpc-sample mpc-sound-test[3218]: pad 4  velocity  69
+[ 6635.262253] mpc-sample mpc-sound-test[3218]: pad 4  velocity  63
+[ 6635.697766] mpc-sample mpc-sound-test[3218]: pad 4  velocity  84
+[ 6635.929827] mpc-sample mpc-sound-test[3218]: pad 4  velocity  58
+[ 6636.176513] mpc-sample mpc-sound-test[3218]: pad 4  velocity  36
+[ 6636.423250] mpc-sample mpc-sound-test[3218]: pad 4  velocity  25
+[ 6636.759917] mpc-sample mpc-sound-test[3218]: pad 4  velocity 127
+[ 6636.968914] mpc-sample mpc-sound-test[3218]: pad 4  velocity 127
+[ 6637.494323] mpc-sample mpc-sound-test[3218]: pad 5  velocity  34
+[ 6637.688731] mpc-sample mpc-sound-test[3218]: pad 5  velocity  36
+[ 6637.874563] mpc-sample mpc-sound-test[3218]: pad 5  velocity  93
+[ 6638.057321] mpc-sample mpc-sound-test[3218]: pad 5  velocity 109
+[ 6638.272130] mpc-sample mpc-sound-test[3218]: pad 5  velocity 122
+[ 6638.588577] mpc-sample mpc-sound-test[3218]: pad 6  velocity  82
+[ 6638.753919] mpc-sample mpc-sound-test[3218]: pad 6  velocity  69
+[ 6638.916549] mpc-sample mpc-sound-test[3218]: pad 6  velocity  98
+[ 6639.070295] mpc-sample mpc-sound-test[3218]: pad 6  velocity 108
+[ 6639.238660] mpc-sample mpc-sound-test[3218]: pad 6  velocity 127
+[ 6639.482450] mpc-sample mpc-sound-test[3218]: pad 7  velocity  58
+[ 6639.630648] mpc-sample mpc-sound-test[3218]: pad 7  velocity  50
+[ 6639.778535] mpc-sample mpc-sound-test[3218]: pad 7  velocity  57
+[ 6639.932449] mpc-sample mpc-sound-test[3218]: pad 7  velocity  87
+[ 6640.083266] mpc-sample mpc-sound-test[3218]: pad 7  velocity  71
+[ 6640.327143] mpc-sample mpc-sound-test[3218]: pad 8  velocity 105
+[ 6640.524443] mpc-sample mpc-sound-test[3218]: pad 8  velocity 118
+[ 6640.794415] mpc-sample mpc-sound-test[3218]: pad 8  velocity 107
+[ 6640.994651] mpc-sample mpc-sound-test[3218]: pad 9  velocity   7
+[ 6641.168912] mpc-sample mpc-sound-test[3218]: pad 10 velocity  60
+[ 6641.398148] mpc-sample mpc-sound-test[3218]: pad 11 velocity 118
+[ 6641.650652] mpc-sample mpc-sound-test[3218]: pad 12 velocity 127
+[ 6641.836404] mpc-sample mpc-sound-test[3218]: pad 13 velocity  85
+[ 6642.027937] mpc-sample mpc-sound-test[3218]: pad 16 velocity  96
+[ 6642.199182] mpc-sample mpc-sound-test[3218]: pad 14 velocity 113
+[ 6642.373429] mpc-sample mpc-sound-test[3218]: pad 15 velocity 127
+[ 6642.646275] mpc-sample mpc-sound-test[3218]: pad 9  velocity  31
+[ 6642.890023] mpc-sample mpc-sound-test[3218]: pad 10 velocity 110
+[ 6643.040903] mpc-sample mpc-sound-test[3218]: pad 11 velocity 110
+[ 6643.200549] mpc-sample mpc-sound-test[3218]: pad 12 velocity 102
+[ 6643.348672] mpc-sample mpc-sound-test[3218]: pad 5  velocity  73
+[ 6643.473406] mpc-sample mpc-sound-test[3218]: pad 7  velocity  81
+[ 6643.566398] mpc-sample mpc-sound-test[3218]: pad 5  velocity  80
+[ 6643.720247] mpc-sample mpc-sound-test[3218]: pad 8  velocity 127
+[ 6643.865208] mpc-sample mpc-sound-test[3218]: pad 6  velocity  56
+[ 6644.045212] mpc-sample mpc-sound-test[3218]: pad 6  velocity  58
+[ 6644.283206] mpc-sample mpc-sound-test[3218]: pad 1  velocity  73
+[ 6644.503764] mpc-sample mpc-sound-test[3218]: pad 2  velocity  64
+[ 6644.820237] mpc-sample mpc-sound-test[3218]: pad 3  velocity 102
+[ 6645.043623] mpc-sample mpc-sound-test[3218]: pad 4  velocity 101
+[ 6645.220712] mpc-sample mpc-sound-test[3218]: pad 5  velocity  94
+[ 6661.878159] mpc-sample mpc-sound-test[3218]: pad 10 velocity  88
+[ 6662.171452] mpc-sample mpc-sound-test[3218]: pad 14 velocity 127
+[ 6662.397675] mpc-sample mpc-sound-test[3218]: pad 15 velocity  60
+[ 6663.021681] mpc-sample mpc-sound-test[3218]: pad 14 velocity  10
+[ 6663.433933] mpc-sample mpc-sound-test[3218]: pad 15 velocity  35
+[ 6664.414899] mpc-sample mpc-sound-test[3218]: pad 14 velocity 127
+[ 6664.661622] mpc-sample mpc-sound-test[3218]: pad 15 velocity   6
+[ 6664.876364] mpc-sample mpc-sound-test[3218]: pad 15 velocity  89
+[ 6665.158059] mpc-sample mpc-sound-test[3218]: pad 14 velocity  71
+[ 6665.430802] mpc-sample mpc-sound-test[3218]: pad 16 velocity  74
+[ 6666.107115] mpc-sample mpc-sound-test[3218]: pad 9  velocity  67
+[ 6666.513384] mpc-sample mpc-sound-test[3218]: pad 10 velocity  99
+[ 6666.832745] mpc-sample mpc-sound-test[3218]: pad 11 velocity  28
+[ 6667.137517] mpc-sample mpc-sound-test[3218]: pad 12 velocity 108
+[ 6667.445152] mpc-sample mpc-sound-test[3218]: pad 7  velocity  56
+[ 6667.755645] mpc-sample mpc-sound-test[3218]: pad 6  velocity  74
+[ 6676.596937] mpc-sample systemd[1]: Stopping /run/mpc-sound-test...
+[ 6676.656694] mpc-sample systemd[1]: mpc-sound-test.service: Deactivated successfully.
+[ 6676.657437] mpc-sample systemd[1]: Stopped /run/mpc-sound-test.

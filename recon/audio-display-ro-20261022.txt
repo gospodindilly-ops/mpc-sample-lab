@@ -1,0 +1,142 @@
+## ac50: active
+## I2S pcm0p/sub0
+access: RW_INTERLEAVED
+format: S32_LE
+subformat: STD
+channels: 2
+rate: 44100 (44100/1)
+period_size: 128
+buffer_size: 384
+state: RUNNING
+owner_pid   : 2376
+trigger_time: 5061.745619746
+## I2S pcm0c/sub0
+access: RW_INTERLEAVED
+format: S32_LE
+subformat: STD
+channels: 2
+rate: 44100 (44100/1)
+period_size: 128
+buffer_size: 256
+state: RUNNING
+owner_pid   : 2376
+trigger_time: 5061.745606037
+## UAC2Gadget pcm0p/sub0
+access: RW_INTERLEAVED
+format: S32_LE
+subformat: STD
+channels: 2
+rate: 44100 (44100/1)
+period_size: 24
+buffer_size: 384
+state: RUNNING
+owner_pid   : 2376
+trigger_time: 5061.757558537
+## UAC2Gadget pcm0c/sub0
+access: RW_INTERLEAVED
+format: S32_LE
+subformat: STD
+channels: 2
+rate: 44100 (44100/1)
+period_size: 24
+buffer_size: 384
+state: RUNNING
+owner_pid   : 2376
+trigger_time: 5061.745540121
+cat: can't open '/proc/asound/cards/id': Not a directory
+## amixer: 
+sh: amixer: not found
+## drm
+crw-rw----    1 root     video      29,   0 Oct 22 03:43 /dev/fb0
+
+/dev/dri:
+drwxr-xr-x    2 root     root            60 Oct 22 03:43 by-path
+crw-rw----    1 root     video     226,   0 Oct 22 03:43 card0
+sh: can't open /sys/class/drm/card0/modes: no such file
+card0:   modes=
+card0-SPI-1: connected enabled modes=320x240 
+driver: ../../../../../../bus/spi/drivers/st7796s
+fb0 name: st7796sdrmfb
+fb0 virtual_size: 320,240
+fb0 bits_per_pixel: 32
+fb0 stride: 1280
+## debugfs dri
+0
+spi3.0
+st7796s dev=spi3.0 unique=spi3.0
+plane[33]: plane-0
+	crtc=crtc-0
+	fb=41
+		allocated by = JUCE Message Th
+		refcount=2
+		format=XR24 little-endian (0x34325258)
+		modifier=0x0
+		size=320x240
+		layers:
+			size[0]=320x240
+			pitch[0]=1280
+			offset[0]=0
+			obj[0]:
+				name=0
+				refcount=3
+				start=001000e5
+				size=307200
+				imported=no
+				dma_addr=0x000000007ab80000
+				vaddr=000000007a13a85c
+	crtc-pos=320x240+0+0
+	src-pos=320.000000x240.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+	color_mgmt_changed=0
+crtc[35]: crtc-0
+	enable=1
+	active=1
+	self_refresh_active=0
+	planes_changed=1
+	mode_changed=0
+	active_changed=0
+	connectors_changed=0
+	color_mgmt_changed=0
+	plane_mask=1
+	connector_mask=1
+	encoder_mask=1
+	mode: "320x240": 0 1 320 320 320 320 240 240 240 240 0x48 0x0
+connector[32]: SPI-1
+	crtc=crtc-0
+	self_refresh_aware=0
+	max_requested_bpc=0
+	colorspace=Default
+## backlight
+backlight 6/6 actual=6
+## holders
+111 az0x-splash: /dev/dri/card0 /dev/fb0 
+2376 MPC Sample Main: /dev/dri/card0 /dev/video0 
+## v4l
+video0 rockchip-rga
+             command  tgid dev master a   uid      magic
+         az0x-splash   111   0   n    y     0          0
+     MPC Sample Main  3290   0   y    y     0          0
+--- framebuffers
+framebuffer[42]:
+	allocated by = JUCE Message Th
+	size=320x240
+			size=307200
+framebuffer[41]:
+	allocated by = JUCE Message Th
+	size=320x240
+			size=307200
+framebuffer[40]:
+	allocated by = az0x-splash
+	size=320x240
+			size=307200
+framebuffer[39]:
+	allocated by = az0x-splash
+	size=320x240
+			size=307200
+framebuffer[37]:
+	allocated by = [fbcon]
+	size=320x240
+			size=307200

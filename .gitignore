@@ -16,6 +16,8 @@ authorized_keys
 # Build output
 panel-demo/mpc-panel-demo
 panel-demo/panel-test
+sound-test/mpc-sound-test
+sound-test/sound-test-host
 
 __pycache__/
 .pytest_cache/
