@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "comment": [
+    "PHASE 2: prove the activation + rollback loop with an UNMODIFIED clone.",
+    "Zero patches on purpose. 'apply' therefore means: clone the stock binary into",
+    "RAM and bind-mount the identical copy over the stock path, then restart. Because",
+    "nothing changes, the running app is byte-for-byte stock - this validates code",
+    "execution (the SD 'Do you want to run it?' path), the bind-mount, and the",
+    "rollback/reboot path WITHOUT altering the app.",
+    "result.sha256 == target.sha256 by construction (a clone of stock).",
+    "sha256 below is the SHA-256 of the local extracted 1.3.0.12 binary; confirm it",
+    "matches the unit's /usr/bin/MPC Sample before relying on it (phase 3)."
+  ],
+  "target": {
+    "name": "MPC Sample",
+    "firmware_version": "1.3.0.12",
+    "path_on_device": "/usr/bin/MPC Sample",
+    "size": 119243440,
+    "sha256": "b6584cba76e416e432ad202509099d34373dc2c3d6a8fb625f5678bf0193b508"
+  },
+  "result": {
+    "comment": "A clone of stock, so identical to target.",
+    "sha256": "b6584cba76e416e432ad202509099d34373dc2c3d6a8fb625f5678bf0193b508"
+  },
+  "patches": []
+}

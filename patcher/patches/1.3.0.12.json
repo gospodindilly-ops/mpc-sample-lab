@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "comment": [
+    "Patch set for ONE exact stock build. Fill in the TODO values from YOUR OWN unit.",
+    "Nothing here is an Akai binary - only the offsets and the bytes YOU change.",
+    "Patches are applied in place: 'patched' must be the same length as 'original'",
+    "(no inserting/removing bytes, so nothing shifts). Use a code-cave or an",
+    "LD_PRELOAD .so if you need more room than a patch site gives you."
+  ],
+  "target": {
+    "name": "MPC Sample",
+    "firmware_version": "1.3.0.12",
+    "path_on_device": "/usr/bin/MPC Sample",
+    "size": 119243440,
+    "sha256": "b6584cba76e416e432ad202509099d34373dc2c3d6a8fb625f5678bf0193b508"
+  },
+  "result": {
+    "comment": "Optional. If set, the applier refuses to finish unless the fully-patched binary matches this. Fill it in once you have a known-good patched build.",
+    "sha256": null
+  },
+  "patches": [
+    {
+      "id": "example-aarch64-nop",
+      "description": "EXAMPLE ONLY - delete this and add your real changes. Writes a single AArch64 NOP.",
+      "enabled": false,
+      "offset": "0x0",
+      "original": "TODO-hex-bytes-currently-at-offset",
+      "patched": "1f2003d5"
+    }
+  ]
+}

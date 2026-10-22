@@ -1,0 +1,13 @@
+#!/bin/sh
+# Entry point offered by the stock MPC Sample app when it finds a script on the
+# SD card ("Script detected - Do you want to run it?"). Keep this tiny: it only
+# hands off to the real applier and tees a log to the card so failures are
+# visible without a UART cable.
+#
+# The user still has to confirm on-screen, so nothing runs behind their back.
+set -eu
+
+HERE=$(dirname "$0")
+MOD="$HERE/../mpc-mod"
+
+exec sh "$MOD/apply.sh" 2>&1 | tee "$MOD/last-run.log"

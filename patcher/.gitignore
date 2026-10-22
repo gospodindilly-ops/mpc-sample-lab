@@ -1,0 +1,14 @@
+# Never commit anything derived from a vendor binary
+*.bin
+*.rbin
+*.img
+MPC-Sample*
+patches.list
+sdcard/mpc-mod/last-run.log
+sdcard/mpc-mod/.pending
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
