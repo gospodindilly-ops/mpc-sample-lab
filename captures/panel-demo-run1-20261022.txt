@@ -1,0 +1,606 @@
+[ 4939.007813] mpc-sample systemd[1]: Starting /run/mpc-panel-demo...
+[ 4939.384651] mpc-sample systemd[1]: Started /run/mpc-panel-demo.
+[ 4939.390382] mpc-sample mpc-panel-demo[2304]: listening on /dev/snd/midiC0D0, Ctrl-C to quit
+[ 4962.235754] mpc-sample mpc-panel-demo[2304]: pad 10        velocity  16
+[ 4962.765213] mpc-sample mpc-panel-demo[2304]: pad 11        velocity   8
+[ 4963.405764] mpc-sample mpc-panel-demo[2304]: pad 10        velocity  75
+[ 4963.685175] mpc-sample mpc-panel-demo[2304]: pad 11        velocity  23
+[ 4964.077178] mpc-sample mpc-panel-demo[2304]: pad 10        velocity  70
+[ 4964.392370] mpc-sample mpc-panel-demo[2304]: pad 10        velocity  72
+[ 4964.701402] mpc-sample mpc-panel-demo[2304]: pad 11        velocity  46
+[ 4965.184296] mpc-sample mpc-panel-demo[2304]: pad 10        velocity  42
+[ 4965.628642] mpc-sample mpc-panel-demo[2304]: pad 11        velocity  46
+[ 4965.983423] mpc-sample mpc-panel-demo[2304]: pad 10        velocity  87
+[ 4966.300167] mpc-sample mpc-panel-demo[2304]: pad 10        velocity 113
+[ 4966.605740] mpc-sample mpc-panel-demo[2304]: pad 10        velocity 115
+[ 4966.896034] mpc-sample mpc-panel-demo[2304]: pad 10        velocity 101
+[ 4967.258587] mpc-sample mpc-panel-demo[2304]: pad 10        velocity 124
+[ 4967.558214] mpc-sample mpc-panel-demo[2304]: pad 10        velocity 127
+[ 4967.835256] mpc-sample mpc-panel-demo[2304]: pad 10        velocity 127
+[ 4968.260951] mpc-sample mpc-panel-demo[2304]: pad 10        velocity 127
+[ 4968.531552] mpc-sample mpc-panel-demo[2304]: pad 10        velocity 127
+[ 4968.820631] mpc-sample mpc-panel-demo[2304]: pad 10        velocity 127
+[ 4969.079023] mpc-sample mpc-panel-demo[2304]: pad 11        velocity  47
+[ 4969.429482] mpc-sample mpc-panel-demo[2304]: pad 12        velocity  23
+[ 4969.455618] mpc-sample mpc-panel-demo[2304]: pad 12        velocity  48
+[ 4969.849731] mpc-sample mpc-panel-demo[2304]: pad 15        velocity  72
+[ 4970.286574] mpc-sample mpc-panel-demo[2304]: pad 14        velocity  96
+[ 4970.529614] mpc-sample mpc-panel-demo[2304]: pad 13        velocity  45
+[ 4970.784646] mpc-sample mpc-panel-demo[2304]: pad 13        velocity  29
+[ 4971.035137] mpc-sample mpc-panel-demo[2304]: pad 13        velocity  24
+[ 4971.591814] mpc-sample mpc-panel-demo[2304]: knob 2          1
+[ 4971.601820] mpc-sample mpc-panel-demo[2304]: knob 2          3
+[ 4971.611876] mpc-sample mpc-panel-demo[2304]: knob 2          5
+[ 4971.621873] mpc-sample mpc-panel-demo[2304]: knob 2          8
+[ 4971.631871] mpc-sample mpc-panel-demo[2304]: knob 2         10
+[ 4971.641936] mpc-sample mpc-panel-demo[2304]: knob 2         13
+[ 4971.651935] mpc-sample mpc-panel-demo[2304]: knob 2         15
+[ 4971.661966] mpc-sample mpc-panel-demo[2304]: knob 2         17
+[ 4971.671996] mpc-sample mpc-panel-demo[2304]: knob 2         19
+[ 4971.682069] mpc-sample mpc-panel-demo[2304]: knob 2         20
+[ 4971.692071] mpc-sample mpc-panel-demo[2304]: knob 2         21
+[ 4971.702118] mpc-sample mpc-panel-demo[2304]: knob 2         22
+[ 4971.772318] mpc-sample mpc-panel-demo[2304]: knob 2         21
+[ 4971.782310] mpc-sample mpc-panel-demo[2304]: knob 2         19
+[ 4971.792308] mpc-sample mpc-panel-demo[2304]: knob 2         17
+[ 4971.802361] mpc-sample mpc-panel-demo[2304]: knob 2         15
+[ 4971.812382] mpc-sample mpc-panel-demo[2304]: knob 2         11
+[ 4971.822381] mpc-sample mpc-panel-demo[2304]: knob 2          8
+[ 4971.832446] mpc-sample mpc-panel-demo[2304]: knob 2          5
+[ 4971.842526] mpc-sample mpc-panel-demo[2304]: knob 2          1
+[ 4971.852489] mpc-sample mpc-panel-demo[2304]: knob 2          0
+[ 4972.464610] mpc-sample mpc-panel-demo[2304]: knob 1        116
+[ 4972.484661] mpc-sample mpc-panel-demo[2304]: knob 1        115
+[ 4972.494710] mpc-sample mpc-panel-demo[2304]: knob 1        114
+[ 4972.504706] mpc-sample mpc-panel-demo[2304]: knob 1        113
+[ 4972.514827] mpc-sample mpc-panel-demo[2304]: knob 1        112
+[ 4972.524884] mpc-sample mpc-panel-demo[2304]: knob 1        111
+[ 4972.534892] mpc-sample mpc-panel-demo[2304]: knob 1        110
+[ 4972.544904] mpc-sample mpc-panel-demo[2304]: knob 1        109
+[ 4972.564989] mpc-sample mpc-panel-demo[2304]: knob 1        108
+[ 4972.595082] mpc-sample mpc-panel-demo[2304]: knob 1        107
+[ 4972.615192] mpc-sample mpc-panel-demo[2304]: knob 1        106
+[ 4972.635270] mpc-sample mpc-panel-demo[2304]: knob 1        105
+[ 4972.645330] mpc-sample mpc-panel-demo[2304]: knob 1        104
+[ 4972.665358] mpc-sample mpc-panel-demo[2304]: knob 1        103
+[ 4972.675426] mpc-sample mpc-panel-demo[2304]: knob 1        102
+[ 4972.735606] mpc-sample mpc-panel-demo[2304]: knob 1        103
+[ 4989.484679] mpc-sample mpc-panel-demo[2304]: CHOP          down
+[ 4989.578210] mpc-sample mpc-panel-demo[2304]: CHOP          up
+[ 4989.865248] mpc-sample mpc-panel-demo[2304]: CHOP          down
+[ 4990.271330] mpc-sample mpc-panel-demo[2304]: CHOP          up
+[ 4990.677295] mpc-sample mpc-panel-demo[2304]: CHOP          down
+[ 4991.209658] mpc-sample mpc-panel-demo[2304]: CHOP          up
+[ 4994.833779] mpc-sample mpc-panel-demo[2304]: MUTE          down
+[ 4995.377924] mpc-sample mpc-panel-demo[2304]: MUTE          up
+[ 4995.783866] mpc-sample mpc-panel-demo[2304]: CHOP          down
+[ 4996.312413] mpc-sample mpc-panel-demo[2304]: CHOP          up
+[ 4996.726796] mpc-sample mpc-panel-demo[2304]: LOOP          down
+[ 4997.046313] mpc-sample mpc-panel-demo[2304]: LOOP          up
+[ 4997.556905] mpc-sample mpc-panel-demo[2304]: 16 LEVELS     down
+[ 4997.843377] mpc-sample mpc-panel-demo[2304]: 16 LEVELS     up
+[ 4998.434274] mpc-sample mpc-panel-demo[2304]: SAMPLE SELECT down
+[ 4998.641781] mpc-sample mpc-panel-demo[2304]: SAMPLE SELECT up
+[ 4999.041259] mpc-sample mpc-panel-demo[2304]: TAP TEMPO     down
+[ 4999.360760] mpc-sample mpc-panel-demo[2304]: TAP TEMPO     up
+[ 5000.018133] mpc-sample mpc-panel-demo[2304]: MINUS         down
+[ 5000.339086] mpc-sample mpc-panel-demo[2304]: MINUS         up
+[ 5000.858340] mpc-sample mpc-panel-demo[2304]: SAMPLE RECORD down
+[ 5001.135515] mpc-sample mpc-panel-demo[2304]: SAMPLE RECORD up
+[ 5002.094733] mpc-sample mpc-panel-demo[2304]: STOP          down
+[ 5002.433626] mpc-sample mpc-panel-demo[2304]: STOP          up
+[ 5002.771936] mpc-sample mpc-panel-demo[2304]: PLAY          down
+[ 5002.986635] mpc-sample mpc-panel-demo[2304]: PLAY          up
+[ 5003.141228] mpc-sample mpc-panel-demo[2304]: STOP          down
+[ 5003.510496] mpc-sample mpc-panel-demo[2304]: STOP          up
+[ 5004.326783] mpc-sample mpc-panel-demo[2304]: ERASE         down
+[ 5004.681165] mpc-sample mpc-panel-demo[2304]: ERASE         up
+[ 5010.549779] mpc-sample mpc-panel-demo[2304]: pad 7         velocity  48
+[ 5011.151871] mpc-sample mpc-panel-demo[2304]: pad 7         velocity  84
+[ 5011.732288] mpc-sample mpc-panel-demo[2304]: pad 7         velocity  90
+[ 5012.166986] mpc-sample mpc-panel-demo[2304]: pad 7         velocity 121
+[ 5013.231647] mpc-sample mpc-panel-demo[2304]: pad 7         velocity  39
+[ 5013.967247] mpc-sample mpc-panel-demo[2304]: pad 7         velocity  20
+[ 5014.334706] mpc-sample mpc-panel-demo[2304]: pad 7         velocity  11
+[ 5014.641145] mpc-sample mpc-panel-demo[2304]: pad 7         velocity  28
+[ 5015.061731] mpc-sample mpc-panel-demo[2304]: pad 7         velocity  12
+[ 5015.281289] mpc-sample mpc-panel-demo[2304]: pad 7         velocity  25
+[ 5015.498071] mpc-sample mpc-panel-demo[2304]: pad 7         velocity  66
+[ 5015.713264] mpc-sample mpc-panel-demo[2304]: pad 7         velocity  91
+[ 5015.961852] mpc-sample mpc-panel-demo[2304]: pad 7         velocity 105
+[ 5016.226121] mpc-sample mpc-panel-demo[2304]: pad 7         velocity 122
+[ 5016.629935] mpc-sample mpc-panel-demo[2304]: pad 7         velocity 127
+[ 5017.152052] mpc-sample mpc-panel-demo[2304]: pad 11        velocity 114
+[ 5017.582578] mpc-sample mpc-panel-demo[2304]: pad 16        velocity 127
+[ 5018.044132] mpc-sample mpc-panel-demo[2304]: pad 6         velocity 127
+[ 5018.216327] mpc-sample mpc-panel-demo[2304]: pad 5         velocity 127
+[ 5018.383954] mpc-sample mpc-panel-demo[2304]: pad 1         velocity 127
+[ 5018.726996] mpc-sample mpc-panel-demo[2304]: pad 1         velocity 127
+[ 5019.019316] mpc-sample mpc-panel-demo[2304]: pad 5         velocity 105
+[ 5019.593841] mpc-sample mpc-panel-demo[2304]: pad 1         velocity  26
+[ 5019.981198] mpc-sample mpc-panel-demo[2304]: pad 6         velocity  58
+[ 5020.563175] mpc-sample mpc-panel-demo[2304]: pad 14        velocity   8
+[ 5020.839887] mpc-sample mpc-panel-demo[2304]: pad 15        velocity  19
+[ 5021.512294] mpc-sample mpc-panel-demo[2304]: pad 11        velocity  19
+[ 5021.751982] mpc-sample mpc-panel-demo[2304]: pad 10        velocity  81
+[ 5021.983807] mpc-sample mpc-panel-demo[2304]: pad 6         velocity  12
+[ 5022.253883] mpc-sample mpc-panel-demo[2304]: pad 7         velocity   4
+[ 5022.786949] mpc-sample mpc-panel-demo[2304]: pad 12        velocity  58
+[ 5023.077326] mpc-sample mpc-panel-demo[2304]: pad 10        velocity  67
+[ 5027.727376] mpc-sample mpc-panel-demo[2304]: knob 2          1
+[ 5027.737314] mpc-sample mpc-panel-demo[2304]: knob 2          4
+[ 5027.747282] mpc-sample mpc-panel-demo[2304]: knob 2          8
+[ 5027.757339] mpc-sample mpc-panel-demo[2304]: knob 2         11
+[ 5027.767336] mpc-sample mpc-panel-demo[2304]: knob 2         15
+[ 5027.777347] mpc-sample mpc-panel-demo[2304]: knob 2         18
+[ 5027.787401] mpc-sample mpc-panel-demo[2304]: knob 2         22
+[ 5027.797452] mpc-sample mpc-panel-demo[2304]: knob 2         26
+[ 5027.807396] mpc-sample mpc-panel-demo[2304]: knob 2         32
+[ 5027.817510] mpc-sample mpc-panel-demo[2304]: knob 2         40
+[ 5027.827489] mpc-sample mpc-panel-demo[2304]: knob 2         49
+[ 5027.837604] mpc-sample mpc-panel-demo[2304]: knob 2         57
+[ 5027.847586] mpc-sample mpc-panel-demo[2304]: knob 2         63
+[ 5027.857625] mpc-sample mpc-panel-demo[2304]: knob 2         69
+[ 5027.867681] mpc-sample mpc-panel-demo[2304]: knob 2         74
+[ 5027.877722] mpc-sample mpc-panel-demo[2304]: knob 2         77
+[ 5027.887779] mpc-sample mpc-panel-demo[2304]: knob 2         80
+[ 5027.897796] mpc-sample mpc-panel-demo[2304]: knob 2         84
+[ 5027.907873] mpc-sample mpc-panel-demo[2304]: knob 2         86
+[ 5027.917894] mpc-sample mpc-panel-demo[2304]: knob 2         88
+[ 5027.927966] mpc-sample mpc-panel-demo[2304]: knob 2         91
+[ 5027.937987] mpc-sample mpc-panel-demo[2304]: knob 2         93
+[ 5027.948070] mpc-sample mpc-panel-demo[2304]: knob 2         96
+[ 5027.958065] mpc-sample mpc-panel-demo[2304]: knob 2         99
+[ 5027.968074] mpc-sample mpc-panel-demo[2304]: knob 2        102
+[ 5027.978308] mpc-sample mpc-panel-demo[2304]: knob 2        106
+[ 5027.988276] mpc-sample mpc-panel-demo[2304]: knob 2        111
+[ 5027.998278] mpc-sample mpc-panel-demo[2304]: knob 2        117
+[ 5028.008263] mpc-sample mpc-panel-demo[2304]: knob 2        123
+[ 5028.018235] mpc-sample mpc-panel-demo[2304]: knob 2        127
+[ 5028.249049] mpc-sample mpc-panel-demo[2304]: knob 2        121
+[ 5028.258997] mpc-sample mpc-panel-demo[2304]: knob 2        114
+[ 5028.269046] mpc-sample mpc-panel-demo[2304]: knob 2        107
+[ 5028.279068] mpc-sample mpc-panel-demo[2304]: knob 2        102
+[ 5028.289132] mpc-sample mpc-panel-demo[2304]: knob 2         96
+[ 5028.299151] mpc-sample mpc-panel-demo[2304]: knob 2         92
+[ 5028.309213] mpc-sample mpc-panel-demo[2304]: knob 2         88
+[ 5028.319232] mpc-sample mpc-panel-demo[2304]: knob 2         84
+[ 5028.329211] mpc-sample mpc-panel-demo[2304]: knob 2         79
+[ 5028.339277] mpc-sample mpc-panel-demo[2304]: knob 2         75
+[ 5028.349308] mpc-sample mpc-panel-demo[2304]: knob 2         71
+[ 5028.359391] mpc-sample mpc-panel-demo[2304]: knob 2         68
+[ 5028.369397] mpc-sample mpc-panel-demo[2304]: knob 2         63
+[ 5028.379405] mpc-sample mpc-panel-demo[2304]: knob 2         61
+[ 5028.389494] mpc-sample mpc-panel-demo[2304]: knob 2         59
+[ 5028.399493] mpc-sample mpc-panel-demo[2304]: knob 2         58
+[ 5028.409585] mpc-sample mpc-panel-demo[2304]: knob 2         57
+[ 5028.439623] mpc-sample mpc-panel-demo[2304]: knob 2         56
+[ 5028.469747] mpc-sample mpc-panel-demo[2304]: knob 2         55
+[ 5028.499897] mpc-sample mpc-panel-demo[2304]: knob 2         56
+[ 5028.981403] mpc-sample mpc-panel-demo[2304]: knob 3         55
+[ 5028.991416] mpc-sample mpc-panel-demo[2304]: knob 3         54
+[ 5029.001452] mpc-sample mpc-panel-demo[2304]: knob 3         52
+[ 5029.011450] mpc-sample mpc-panel-demo[2304]: knob 3         51
+[ 5029.031539] mpc-sample mpc-panel-demo[2304]: knob 3         47
+[ 5029.041561] mpc-sample mpc-panel-demo[2304]: knob 3         45
+[ 5029.051636] mpc-sample mpc-panel-demo[2304]: knob 3         42
+[ 5029.061646] mpc-sample mpc-panel-demo[2304]: knob 3         38
+[ 5029.071682] mpc-sample mpc-panel-demo[2304]: knob 3         35
+[ 5029.081734] mpc-sample mpc-panel-demo[2304]: knob 3         30
+[ 5029.091735] mpc-sample mpc-panel-demo[2304]: knob 3         26
+[ 5029.101796] mpc-sample mpc-panel-demo[2304]: knob 2          6
+[ 5029.101796] mpc-sample mpc-panel-demo[2304]: knob 3         22
+[ 5029.111803] mpc-sample mpc-panel-demo[2304]: knob 3         16
+[ 5029.121831] mpc-sample mpc-panel-demo[2304]: knob 3         12
+[ 5029.131859] mpc-sample mpc-panel-demo[2304]: knob 3          7
+[ 5029.141906] mpc-sample mpc-panel-demo[2304]: knob 3          2
+[ 5029.152015] mpc-sample mpc-panel-demo[2304]: knob 3          0
+[ 5029.272398] mpc-sample mpc-panel-demo[2304]: knob 3          3
+[ 5029.282406] mpc-sample mpc-panel-demo[2304]: knob 3          8
+[ 5029.292404] mpc-sample mpc-panel-demo[2304]: knob 3         13
+[ 5029.302500] mpc-sample mpc-panel-demo[2304]: knob 3         19
+[ 5029.312493] mpc-sample mpc-panel-demo[2304]: knob 3         25
+[ 5029.322523] mpc-sample mpc-panel-demo[2304]: knob 3         32
+[ 5029.332567] mpc-sample mpc-panel-demo[2304]: knob 3         39
+[ 5029.342546] mpc-sample mpc-panel-demo[2304]: knob 3         46
+[ 5029.352716] mpc-sample mpc-panel-demo[2304]: knob 3         51
+[ 5029.362749] mpc-sample mpc-panel-demo[2304]: knob 3         58
+[ 5029.372762] mpc-sample mpc-panel-demo[2304]: knob 3         62
+[ 5029.382764] mpc-sample mpc-panel-demo[2304]: knob 3         65
+[ 5029.392766] mpc-sample mpc-panel-demo[2304]: knob 3         68
+[ 5029.402840] mpc-sample mpc-panel-demo[2304]: knob 3         70
+[ 5029.412853] mpc-sample mpc-panel-demo[2304]: knob 3         73
+[ 5029.422932] mpc-sample mpc-panel-demo[2304]: knob 3         75
+[ 5029.432951] mpc-sample mpc-panel-demo[2304]: knob 3         77
+[ 5029.443062] mpc-sample mpc-panel-demo[2304]: knob 3         80
+[ 5029.453081] mpc-sample mpc-panel-demo[2304]: knob 3         83
+[ 5029.463072] mpc-sample mpc-panel-demo[2304]: knob 3         85
+[ 5029.473109] mpc-sample mpc-panel-demo[2304]: knob 3         87
+[ 5029.483098] mpc-sample mpc-panel-demo[2304]: knob 3         89
+[ 5029.513205] mpc-sample mpc-panel-demo[2304]: knob 3         87
+[ 5029.523351] mpc-sample mpc-panel-demo[2304]: knob 3         84
+[ 5029.533304] mpc-sample mpc-panel-demo[2304]: knob 3         81
+[ 5029.543330] mpc-sample mpc-panel-demo[2304]: knob 3         77
+[ 5029.553401] mpc-sample mpc-panel-demo[2304]: knob 3         75
+[ 5029.563430] mpc-sample mpc-panel-demo[2304]: knob 3         73
+[ 5029.573454] mpc-sample mpc-panel-demo[2304]: knob 3         71
+[ 5029.603603] mpc-sample mpc-panel-demo[2304]: knob 3         70
+[ 5029.613657] mpc-sample mpc-panel-demo[2304]: knob 3         69
+[ 5030.316108] mpc-sample mpc-panel-demo[2304]: knob 4          3
+[ 5030.326110] mpc-sample mpc-panel-demo[2304]: knob 4          7
+[ 5030.336094] mpc-sample mpc-panel-demo[2304]: knob 4         10
+[ 5030.346147] mpc-sample mpc-panel-demo[2304]: knob 4         14
+[ 5030.356124] mpc-sample mpc-panel-demo[2304]: knob 4         19
+[ 5030.366115] mpc-sample mpc-panel-demo[2304]: knob 4         24
+[ 5030.376235] mpc-sample mpc-panel-demo[2304]: knob 4         29
+[ 5030.386244] mpc-sample mpc-panel-demo[2304]: knob 4         34
+[ 5030.396326] mpc-sample mpc-panel-demo[2304]: knob 4         38
+[ 5030.406307] mpc-sample mpc-panel-demo[2304]: knob 4         41
+[ 5030.416281] mpc-sample mpc-panel-demo[2304]: knob 4         43
+[ 5030.426371] mpc-sample mpc-panel-demo[2304]: knob 4         45
+[ 5030.436350] mpc-sample mpc-panel-demo[2304]: knob 4         47
+[ 5030.446337] mpc-sample mpc-panel-demo[2304]: knob 4         50
+[ 5030.456430] mpc-sample mpc-panel-demo[2304]: knob 4         52
+[ 5030.466422] mpc-sample mpc-panel-demo[2304]: knob 4         55
+[ 5030.476409] mpc-sample mpc-panel-demo[2304]: knob 4         58
+[ 5030.486480] mpc-sample mpc-panel-demo[2304]: knob 4         62
+[ 5030.496509] mpc-sample mpc-panel-demo[2304]: knob 4         66
+[ 5030.506601] mpc-sample mpc-panel-demo[2304]: knob 4         70
+[ 5030.516593] mpc-sample mpc-panel-demo[2304]: knob 4         74
+[ 5030.526583] mpc-sample mpc-panel-demo[2304]: knob 4         78
+[ 5030.536679] mpc-sample mpc-panel-demo[2304]: knob 4         81
+[ 5030.546672] mpc-sample mpc-panel-demo[2304]: knob 4         86
+[ 5030.556696] mpc-sample mpc-panel-demo[2304]: knob 4         90
+[ 5030.566771] mpc-sample mpc-panel-demo[2304]: knob 4         96
+[ 5030.576741] mpc-sample mpc-panel-demo[2304]: knob 4        102
+[ 5030.586846] mpc-sample mpc-panel-demo[2304]: knob 4        107
+[ 5030.596855] mpc-sample mpc-panel-demo[2304]: knob 4        111
+[ 5030.606957] mpc-sample mpc-panel-demo[2304]: knob 4        115
+[ 5030.616967] mpc-sample mpc-panel-demo[2304]: knob 4        118
+[ 5030.627071] mpc-sample mpc-panel-demo[2304]: knob 4        120
+[ 5030.637083] mpc-sample mpc-panel-demo[2304]: knob 4        121
+[ 5030.657190] mpc-sample mpc-panel-demo[2304]: knob 4        120
+[ 5030.667216] mpc-sample mpc-panel-demo[2304]: knob 4        119
+[ 5030.677255] mpc-sample mpc-panel-demo[2304]: knob 4        116
+[ 5030.687257] mpc-sample mpc-panel-demo[2304]: knob 4        112
+[ 5030.697323] mpc-sample mpc-panel-demo[2304]: knob 4        108
+[ 5030.707321] mpc-sample mpc-panel-demo[2304]: knob 4        103
+[ 5030.717357] mpc-sample mpc-panel-demo[2304]: knob 4         97
+[ 5030.727388] mpc-sample mpc-panel-demo[2304]: knob 4         91
+[ 5030.737397] mpc-sample mpc-panel-demo[2304]: knob 4         84
+[ 5030.747424] mpc-sample mpc-panel-demo[2304]: knob 4         76
+[ 5030.757464] mpc-sample mpc-panel-demo[2304]: knob 4         68
+[ 5030.767464] mpc-sample mpc-panel-demo[2304]: knob 4         62
+[ 5030.777500] mpc-sample mpc-panel-demo[2304]: knob 4         57
+[ 5030.787531] mpc-sample mpc-panel-demo[2304]: knob 4         53
+[ 5030.797539] mpc-sample mpc-panel-demo[2304]: knob 4         50
+[ 5030.807628] mpc-sample mpc-panel-demo[2304]: knob 4         49
+[ 5030.817749] mpc-sample mpc-panel-demo[2304]: knob 4         47
+[ 5030.827745] mpc-sample mpc-panel-demo[2304]: knob 4         46
+[ 5030.837747] mpc-sample mpc-panel-demo[2304]: knob 4         45
+[ 5030.847780] mpc-sample mpc-panel-demo[2304]: knob 4         44
+[ 5030.857860] mpc-sample mpc-panel-demo[2304]: knob 4         43
+[ 5030.867894] mpc-sample mpc-panel-demo[2304]: knob 4         42
+[ 5030.887927] mpc-sample mpc-panel-demo[2304]: knob 4         41
+[ 5030.898057] mpc-sample mpc-panel-demo[2304]: knob 4         40
+[ 5030.908103] mpc-sample mpc-panel-demo[2304]: knob 4         39
+[ 5030.918146] mpc-sample mpc-panel-demo[2304]: knob 4         38
+[ 5030.938245] mpc-sample mpc-panel-demo[2304]: knob 4         39
+[ 5030.968357] mpc-sample mpc-panel-demo[2304]: knob 4         40
+[ 5030.978355] mpc-sample mpc-panel-demo[2304]: knob 4         42
+[ 5030.988438] mpc-sample mpc-panel-demo[2304]: knob 4         44
+[ 5030.998419] mpc-sample mpc-panel-demo[2304]: knob 4         47
+[ 5031.008417] mpc-sample mpc-panel-demo[2304]: knob 4         51
+[ 5031.018504] mpc-sample mpc-panel-demo[2304]: knob 4         54
+[ 5031.028567] mpc-sample mpc-panel-demo[2304]: knob 4         56
+[ 5033.597681] mpc-sample mpc-panel-demo[2304]: knob 1        102
+[ 5033.637831] mpc-sample mpc-panel-demo[2304]: knob 1        103
+[ 5033.647800] mpc-sample mpc-panel-demo[2304]: knob 1        104
+[ 5033.657823] mpc-sample mpc-panel-demo[2304]: knob 1        105
+[ 5033.667857] mpc-sample mpc-panel-demo[2304]: knob 1        106
+[ 5033.677863] mpc-sample mpc-panel-demo[2304]: knob 1        107
+[ 5033.687922] mpc-sample mpc-panel-demo[2304]: knob 1        108
+[ 5033.697925] mpc-sample mpc-panel-demo[2304]: knob 1        109
+[ 5033.718035] mpc-sample mpc-panel-demo[2304]: knob 1        110
+[ 5033.728061] mpc-sample mpc-panel-demo[2304]: knob 1        111
+[ 5033.748098] mpc-sample mpc-panel-demo[2304]: knob 1        112
+[ 5033.758095] mpc-sample mpc-panel-demo[2304]: knob 1        114
+[ 5033.768158] mpc-sample mpc-panel-demo[2304]: knob 1        116
+[ 5033.778165] mpc-sample mpc-panel-demo[2304]: knob 1        117
+[ 5033.788201] mpc-sample mpc-panel-demo[2304]: knob 1        118
+[ 5033.798231] mpc-sample mpc-panel-demo[2304]: knob 1        119
+[ 5033.808268] mpc-sample mpc-panel-demo[2304]: knob 1        120
+[ 5033.818252] mpc-sample mpc-panel-demo[2304]: knob 1        122
+[ 5033.828333] mpc-sample mpc-panel-demo[2304]: knob 1        124
+[ 5033.838295] mpc-sample mpc-panel-demo[2304]: knob 1        126
+[ 5033.848373] mpc-sample mpc-panel-demo[2304]: knob 1        127
+[ 5033.968909] mpc-sample mpc-panel-demo[2304]: knob 1        125
+[ 5033.978879] mpc-sample mpc-panel-demo[2304]: knob 1        123
+[ 5033.988903] mpc-sample mpc-panel-demo[2304]: knob 1        122
+[ 5033.998924] mpc-sample mpc-panel-demo[2304]: knob 1        120
+[ 5034.008905] mpc-sample mpc-panel-demo[2304]: knob 1        119
+[ 5034.018901] mpc-sample mpc-panel-demo[2304]: knob 1        117
+[ 5034.028995] mpc-sample mpc-panel-demo[2304]: knob 1        116
+[ 5034.038983] mpc-sample mpc-panel-demo[2304]: knob 1        115
+[ 5034.049095] mpc-sample mpc-panel-demo[2304]: knob 1        114
+[ 5034.059104] mpc-sample mpc-panel-demo[2304]: knob 1        112
+[ 5034.079134] mpc-sample mpc-panel-demo[2304]: knob 1        111
+[ 5034.099169] mpc-sample mpc-panel-demo[2304]: knob 1        110
+[ 5034.109179] mpc-sample mpc-panel-demo[2304]: knob 1        109
+[ 5034.289835] mpc-sample mpc-panel-demo[2304]: knob 1        108
+[ 5034.319911] mpc-sample mpc-panel-demo[2304]: knob 1        107
+[ 5034.329968] mpc-sample mpc-panel-demo[2304]: knob 1        106
+[ 5034.339969] mpc-sample mpc-panel-demo[2304]: knob 1        105
+[ 5034.350042] mpc-sample mpc-panel-demo[2304]: knob 1        104
+[ 5034.360108] mpc-sample mpc-panel-demo[2304]: knob 1        102
+[ 5034.370071] mpc-sample mpc-panel-demo[2304]: knob 1        100
+[ 5034.380084] mpc-sample mpc-panel-demo[2304]: knob 1         98
+[ 5034.390110] mpc-sample mpc-panel-demo[2304]: knob 1         96
+[ 5034.400124] mpc-sample mpc-panel-demo[2304]: knob 1         94
+[ 5034.410141] mpc-sample mpc-panel-demo[2304]: knob 1         93
+[ 5034.420177] mpc-sample mpc-panel-demo[2304]: knob 1         91
+[ 5034.430175] mpc-sample mpc-panel-demo[2304]: knob 1         90
+[ 5034.440209] mpc-sample mpc-panel-demo[2304]: knob 1         89
+[ 5034.450262] mpc-sample mpc-panel-demo[2304]: knob 1         88
+[ 5034.460247] mpc-sample mpc-panel-demo[2304]: knob 1         86
+[ 5034.470324] mpc-sample mpc-panel-demo[2304]: knob 1         85
+[ 5034.480354] mpc-sample mpc-panel-demo[2304]: knob 1         83
+[ 5034.490301] mpc-sample mpc-panel-demo[2304]: knob 1         82
+[ 5034.500423] mpc-sample mpc-panel-demo[2304]: knob 1         80
+[ 5034.510410] mpc-sample mpc-panel-demo[2304]: knob 1         79
+[ 5034.520487] mpc-sample mpc-panel-demo[2304]: knob 1         77
+[ 5034.530520] mpc-sample mpc-panel-demo[2304]: knob 1         76
+[ 5034.540618] mpc-sample mpc-panel-demo[2304]: knob 1         74
+[ 5034.550612] mpc-sample mpc-panel-demo[2304]: knob 1         72
+[ 5034.560598] mpc-sample mpc-panel-demo[2304]: knob 1         70
+[ 5034.570687] mpc-sample mpc-panel-demo[2304]: knob 1         68
+[ 5034.580676] mpc-sample mpc-panel-demo[2304]: knob 1         66
+[ 5034.590709] mpc-sample mpc-panel-demo[2304]: knob 1         64
+[ 5034.600780] mpc-sample mpc-panel-demo[2304]: knob 1         62
+[ 5034.610775] mpc-sample mpc-panel-demo[2304]: knob 1         61
+[ 5034.620776] mpc-sample mpc-panel-demo[2304]: knob 1         60
+[ 5034.630813] mpc-sample mpc-panel-demo[2304]: knob 1         59
+[ 5034.640817] mpc-sample mpc-panel-demo[2304]: knob 1         58
+[ 5034.650877] mpc-sample mpc-panel-demo[2304]: knob 1         57
+[ 5034.670880] mpc-sample mpc-panel-demo[2304]: knob 1         56
+[ 5034.721074] mpc-sample mpc-panel-demo[2304]: knob 1         55
+[ 5034.761204] mpc-sample mpc-panel-demo[2304]: knob 1         54
+[ 5034.771212] mpc-sample mpc-panel-demo[2304]: knob 1         53
+[ 5034.781254] mpc-sample mpc-panel-demo[2304]: knob 1         52
+[ 5034.921757] mpc-sample mpc-panel-demo[2304]: knob 1         51
+[ 5034.931728] mpc-sample mpc-panel-demo[2304]: knob 1         50
+[ 5034.941769] mpc-sample mpc-panel-demo[2304]: knob 1         49
+[ 5034.951770] mpc-sample mpc-panel-demo[2304]: knob 1         48
+[ 5034.961802] mpc-sample mpc-panel-demo[2304]: knob 1         46
+[ 5034.971828] mpc-sample mpc-panel-demo[2304]: knob 1         44
+[ 5034.981852] mpc-sample mpc-panel-demo[2304]: knob 1         42
+[ 5034.991949] mpc-sample mpc-panel-demo[2304]: knob 1         40
+[ 5035.002065] mpc-sample mpc-panel-demo[2304]: knob 1         38
+[ 5035.012080] mpc-sample mpc-panel-demo[2304]: knob 1         36
+[ 5035.022139] mpc-sample mpc-panel-demo[2304]: knob 1         34
+[ 5035.032214] mpc-sample mpc-panel-demo[2304]: knob 1         33
+[ 5035.042196] mpc-sample mpc-panel-demo[2304]: knob 1         32
+[ 5035.052276] mpc-sample mpc-panel-demo[2304]: knob 1         30
+[ 5035.062293] mpc-sample mpc-panel-demo[2304]: knob 1         28
+[ 5035.072383] mpc-sample mpc-panel-demo[2304]: knob 1         27
+[ 5035.082370] mpc-sample mpc-panel-demo[2304]: knob 1         25
+[ 5035.092363] mpc-sample mpc-panel-demo[2304]: knob 1         24
+[ 5035.102450] mpc-sample mpc-panel-demo[2304]: knob 1         22
+[ 5035.112446] mpc-sample mpc-panel-demo[2304]: knob 1         21
+[ 5035.122426] mpc-sample mpc-panel-demo[2304]: knob 1         20
+[ 5035.142547] mpc-sample mpc-panel-demo[2304]: knob 1         21
+[ 5035.152685] mpc-sample mpc-panel-demo[2304]: knob 1         22
+[ 5035.162628] mpc-sample mpc-panel-demo[2304]: knob 1         24
+[ 5035.172766] mpc-sample mpc-panel-demo[2304]: knob 1         26
+[ 5035.182713] mpc-sample mpc-panel-demo[2304]: knob 1         28
+[ 5035.192705] mpc-sample mpc-panel-demo[2304]: knob 1         31
+[ 5035.202800] mpc-sample mpc-panel-demo[2304]: knob 1         34
+[ 5035.212877] mpc-sample mpc-panel-demo[2304]: knob 1         37
+[ 5035.222916] mpc-sample mpc-panel-demo[2304]: knob 1         40
+[ 5035.232920] mpc-sample mpc-panel-demo[2304]: knob 1         43
+[ 5035.242949] mpc-sample mpc-panel-demo[2304]: knob 1         45
+[ 5035.253070] mpc-sample mpc-panel-demo[2304]: knob 1         48
+[ 5035.263073] mpc-sample mpc-panel-demo[2304]: knob 1         50
+[ 5035.273092] mpc-sample mpc-panel-demo[2304]: knob 1         51
+[ 5035.283103] mpc-sample mpc-panel-demo[2304]: knob 1         52
+[ 5035.293157] mpc-sample mpc-panel-demo[2304]: knob 1         54
+[ 5035.303178] mpc-sample mpc-panel-demo[2304]: knob 1         55
+[ 5035.313160] mpc-sample mpc-panel-demo[2304]: knob 1         56
+[ 5035.323218] mpc-sample mpc-panel-demo[2304]: knob 1         57
+[ 5035.333222] mpc-sample mpc-panel-demo[2304]: knob 1         58
+[ 5035.343227] mpc-sample mpc-panel-demo[2304]: knob 1         59
+[ 5035.353284] mpc-sample mpc-panel-demo[2304]: knob 1         60
+[ 5035.363293] mpc-sample mpc-panel-demo[2304]: knob 1         61
+[ 5035.373293] mpc-sample mpc-panel-demo[2304]: knob 1         63
+[ 5035.383361] mpc-sample mpc-panel-demo[2304]: knob 1         64
+[ 5035.393361] mpc-sample mpc-panel-demo[2304]: knob 1         65
+[ 5035.403486] mpc-sample mpc-panel-demo[2304]: knob 1         66
+[ 5035.413516] mpc-sample mpc-panel-demo[2304]: knob 1         67
+[ 5035.433661] mpc-sample mpc-panel-demo[2304]: knob 1         68
+[ 5035.443547] mpc-sample mpc-panel-demo[2304]: knob 1         69
+[ 5035.453551] mpc-sample mpc-panel-demo[2304]: knob 1         70
+[ 5035.463585] mpc-sample mpc-panel-demo[2304]: knob 1         71
+[ 5035.473594] mpc-sample mpc-panel-demo[2304]: knob 1         72
+[ 5035.483621] mpc-sample mpc-panel-demo[2304]: knob 1         73
+[ 5035.493654] mpc-sample mpc-panel-demo[2304]: knob 1         74
+[ 5035.503663] mpc-sample mpc-panel-demo[2304]: knob 1         75
+[ 5035.553830] mpc-sample mpc-panel-demo[2304]: knob 1         74
+[ 5035.563912] mpc-sample mpc-panel-demo[2304]: knob 1         72
+[ 5035.573911] mpc-sample mpc-panel-demo[2304]: knob 1         70
+[ 5035.583926] mpc-sample mpc-panel-demo[2304]: knob 1         67
+[ 5035.593974] mpc-sample mpc-panel-demo[2304]: knob 1         66
+[ 5035.603983] mpc-sample mpc-panel-demo[2304]: knob 1         63
+[ 5035.614075] mpc-sample mpc-panel-demo[2304]: knob 1         61
+[ 5035.624111] mpc-sample mpc-panel-demo[2304]: knob 1         59
+[ 5035.634076] mpc-sample mpc-panel-demo[2304]: knob 1         56
+[ 5035.644095] mpc-sample mpc-panel-demo[2304]: knob 1         55
+[ 5035.654118] mpc-sample mpc-panel-demo[2304]: knob 1         52
+[ 5035.664192] mpc-sample mpc-panel-demo[2304]: knob 1         50
+[ 5035.674232] mpc-sample mpc-panel-demo[2304]: knob 1         48
+[ 5035.684353] mpc-sample mpc-panel-demo[2304]: knob 1         46
+[ 5035.694350] mpc-sample mpc-panel-demo[2304]: knob 1         44
+[ 5035.704423] mpc-sample mpc-panel-demo[2304]: knob 1         42
+[ 5035.714460] mpc-sample mpc-panel-demo[2304]: knob 1         40
+[ 5035.724533] mpc-sample mpc-panel-demo[2304]: knob 1         39
+[ 5035.734572] mpc-sample mpc-panel-demo[2304]: knob 1         37
+[ 5035.744646] mpc-sample mpc-panel-demo[2304]: knob 1         35
+[ 5035.754688] mpc-sample mpc-panel-demo[2304]: knob 1         33
+[ 5035.764753] mpc-sample mpc-panel-demo[2304]: knob 1         31
+[ 5035.774833] mpc-sample mpc-panel-demo[2304]: knob 1         28
+[ 5035.784818] mpc-sample mpc-panel-demo[2304]: knob 1         27
+[ 5035.794910] mpc-sample mpc-panel-demo[2304]: knob 1         25
+[ 5035.804930] mpc-sample mpc-panel-demo[2304]: knob 1         22
+[ 5035.815067] mpc-sample mpc-panel-demo[2304]: knob 1         21
+[ 5035.825053] mpc-sample mpc-panel-demo[2304]: knob 1         19
+[ 5035.835107] mpc-sample mpc-panel-demo[2304]: knob 1         17
+[ 5035.845141] mpc-sample mpc-panel-demo[2304]: knob 1         15
+[ 5035.855233] mpc-sample mpc-panel-demo[2304]: knob 1         13
+[ 5035.865216] mpc-sample mpc-panel-demo[2304]: knob 1         12
+[ 5035.875213] mpc-sample mpc-panel-demo[2304]: knob 1         11
+[ 5035.885297] mpc-sample mpc-panel-demo[2304]: knob 1         10
+[ 5035.895294] mpc-sample mpc-panel-demo[2304]: knob 1          9
+[ 5035.905281] mpc-sample mpc-panel-demo[2304]: knob 1          8
+[ 5035.915371] mpc-sample mpc-panel-demo[2304]: knob 1          7
+[ 5035.925358] mpc-sample mpc-panel-demo[2304]: knob 1          6
+[ 5035.955607] mpc-sample mpc-panel-demo[2304]: knob 1          5
+[ 5035.965593] mpc-sample mpc-panel-demo[2304]: knob 1          4
+[ 5036.005821] mpc-sample mpc-panel-demo[2304]: knob 1          3
+[ 5036.025935] mpc-sample mpc-panel-demo[2304]: knob 1          2
+[ 5036.036020] mpc-sample mpc-panel-demo[2304]: knob 1          1
+[ 5036.046051] mpc-sample mpc-panel-demo[2304]: knob 1          0
+[ 5036.407251] mpc-sample mpc-panel-demo[2304]: knob 1          3
+[ 5036.417365] mpc-sample mpc-panel-demo[2304]: knob 1          5
+[ 5036.427302] mpc-sample mpc-panel-demo[2304]: knob 1          7
+[ 5036.437401] mpc-sample mpc-panel-demo[2304]: knob 1          9
+[ 5036.447380] mpc-sample mpc-panel-demo[2304]: knob 1         11
+[ 5036.457365] mpc-sample mpc-panel-demo[2304]: knob 1         13
+[ 5036.467432] mpc-sample mpc-panel-demo[2304]: knob 1         16
+[ 5036.477450] mpc-sample mpc-panel-demo[2304]: knob 1         19
+[ 5036.487484] mpc-sample mpc-panel-demo[2304]: knob 1         20
+[ 5036.497521] mpc-sample mpc-panel-demo[2304]: knob 1         23
+[ 5036.507550] mpc-sample mpc-panel-demo[2304]: knob 1         25
+[ 5036.517620] mpc-sample mpc-panel-demo[2304]: knob 1         28
+[ 5036.527631] mpc-sample mpc-panel-demo[2304]: knob 1         30
+[ 5036.537667] mpc-sample mpc-panel-demo[2304]: knob 1         33
+[ 5036.547772] mpc-sample mpc-panel-demo[2304]: knob 1         37
+[ 5036.557844] mpc-sample mpc-panel-demo[2304]: knob 1         40
+[ 5036.567884] mpc-sample mpc-panel-demo[2304]: knob 1         43
+[ 5036.577983] mpc-sample mpc-panel-demo[2304]: knob 1         45
+[ 5036.587969] mpc-sample mpc-panel-demo[2304]: knob 1         48
+[ 5036.597964] mpc-sample mpc-panel-demo[2304]: knob 1         50
+[ 5036.608065] mpc-sample mpc-panel-demo[2304]: knob 1         52
+[ 5036.618108] mpc-sample mpc-panel-demo[2304]: knob 1         53
+[ 5036.628131] mpc-sample mpc-panel-demo[2304]: knob 1         55
+[ 5036.638136] mpc-sample mpc-panel-demo[2304]: knob 1         56
+[ 5036.648138] mpc-sample mpc-panel-demo[2304]: knob 1         58
+[ 5036.658243] mpc-sample mpc-panel-demo[2304]: knob 1         60
+[ 5036.668205] mpc-sample mpc-panel-demo[2304]: knob 1         63
+[ 5036.678238] mpc-sample mpc-panel-demo[2304]: knob 1         65
+[ 5036.688265] mpc-sample mpc-panel-demo[2304]: knob 1         67
+[ 5036.698276] mpc-sample mpc-panel-demo[2304]: knob 1         69
+[ 5036.708302] mpc-sample mpc-panel-demo[2304]: knob 1         71
+[ 5036.718340] mpc-sample mpc-panel-demo[2304]: knob 1         73
+[ 5036.728345] mpc-sample mpc-panel-demo[2304]: knob 1         74
+[ 5036.738407] mpc-sample mpc-panel-demo[2304]: knob 1         76
+[ 5036.748403] mpc-sample mpc-panel-demo[2304]: knob 1         77
+[ 5036.768561] mpc-sample mpc-panel-demo[2304]: knob 1         78
+[ 5036.788669] mpc-sample mpc-panel-demo[2304]: knob 1         79
+[ 5036.798685] mpc-sample mpc-panel-demo[2304]: knob 1         80
+[ 5036.818751] mpc-sample mpc-panel-demo[2304]: knob 1         82
+[ 5036.828900] mpc-sample mpc-panel-demo[2304]: knob 1         83
+[ 5036.838810] mpc-sample mpc-panel-demo[2304]: knob 1         85
+[ 5036.848820] mpc-sample mpc-panel-demo[2304]: knob 1         86
+[ 5036.858876] mpc-sample mpc-panel-demo[2304]: knob 1         87
+[ 5036.868890] mpc-sample mpc-panel-demo[2304]: knob 1         89
+[ 5036.878992] mpc-sample mpc-panel-demo[2304]: knob 1         90
+[ 5036.889023] mpc-sample mpc-panel-demo[2304]: knob 1         92
+[ 5036.899110] mpc-sample mpc-panel-demo[2304]: knob 1         93
+[ 5036.909166] mpc-sample mpc-panel-demo[2304]: knob 1         94
+[ 5036.919149] mpc-sample mpc-panel-demo[2304]: knob 1         97
+[ 5036.929186] mpc-sample mpc-panel-demo[2304]: knob 1         98
+[ 5036.939185] mpc-sample mpc-panel-demo[2304]: knob 1        100
+[ 5036.949252] mpc-sample mpc-panel-demo[2304]: knob 1        102
+[ 5036.959250] mpc-sample mpc-panel-demo[2304]: knob 1        104
+[ 5036.969257] mpc-sample mpc-panel-demo[2304]: knob 1        106
+[ 5036.979312] mpc-sample mpc-panel-demo[2304]: knob 1          0
+[ 5036.989324] mpc-sample mpc-panel-demo[2304]: knob 1        109
+[ 5036.999328] mpc-sample mpc-panel-demo[2304]: knob 1        111
+[ 5037.009388] mpc-sample mpc-panel-demo[2304]: knob 1        113
+[ 5037.019392] mpc-sample mpc-panel-demo[2304]: knob 1        115
+[ 5037.029373] mpc-sample mpc-panel-demo[2304]: knob 1        117
+[ 5037.039464] mpc-sample mpc-panel-demo[2304]: knob 1        118
+[ 5037.049469] mpc-sample mpc-panel-demo[2304]: knob 1        120
+[ 5037.059538] mpc-sample mpc-panel-demo[2304]: knob 1        121
+[ 5037.069589] mpc-sample mpc-panel-demo[2304]: knob 1        122
+[ 5037.079694] mpc-sample mpc-panel-demo[2304]: knob 1        124
+[ 5037.089705] mpc-sample mpc-panel-demo[2304]: knob 1        126
+[ 5037.099727] mpc-sample mpc-panel-demo[2304]: knob 1        127
+[ 5037.451378] mpc-sample mpc-panel-demo[2304]: knob 1        124
+[ 5037.461257] mpc-sample mpc-panel-demo[2304]: knob 1        121
+[ 5037.471269] mpc-sample mpc-panel-demo[2304]: knob 1        119
+[ 5037.481298] mpc-sample mpc-panel-demo[2304]: knob 1        116
+[ 5037.491299] mpc-sample mpc-panel-demo[2304]: knob 1        113
+[ 5037.501363] mpc-sample mpc-panel-demo[2304]: knob 1        109
+[ 5037.511415] mpc-sample mpc-panel-demo[2304]: knob 1        106
+[ 5037.521507] mpc-sample mpc-panel-demo[2304]: knob 1        102
+[ 5037.531500] mpc-sample mpc-panel-demo[2304]: knob 1         98
+[ 5037.541490] mpc-sample mpc-panel-demo[2304]: knob 1         96
+[ 5037.551588] mpc-sample mpc-panel-demo[2304]: knob 1         93
+[ 5037.561569] mpc-sample mpc-panel-demo[2304]: knob 1         90
+[ 5037.571657] mpc-sample mpc-panel-demo[2304]: knob 1         87
+[ 5037.581664] mpc-sample mpc-panel-demo[2304]: knob 1         85
+[ 5037.591660] mpc-sample mpc-panel-demo[2304]: knob 1         83
+[ 5037.601725] mpc-sample mpc-panel-demo[2304]: knob 1         82
+[ 5037.611730] mpc-sample mpc-panel-demo[2304]: knob 1         80
+[ 5037.621789] mpc-sample mpc-panel-demo[2304]: knob 1         79
+[ 5037.631801] mpc-sample mpc-panel-demo[2304]: knob 1         78
+[ 5037.641807] mpc-sample mpc-panel-demo[2304]: knob 1         77
+[ 5037.651831] mpc-sample mpc-panel-demo[2304]: knob 1         75
+[ 5037.661868] mpc-sample mpc-panel-demo[2304]: knob 1         74
+[ 5037.671871] mpc-sample mpc-panel-demo[2304]: knob 1         72
+[ 5037.681976] mpc-sample mpc-panel-demo[2304]: knob 1         70
+[ 5037.691928] mpc-sample mpc-panel-demo[2304]: knob 1         68
+[ 5037.702061] mpc-sample mpc-panel-demo[2304]: knob 1         67
+[ 5037.712073] mpc-sample mpc-panel-demo[2304]: knob 1         66
+[ 5037.722101] mpc-sample mpc-panel-demo[2304]: knob 1         64
+[ 5037.732110] mpc-sample mpc-panel-demo[2304]: knob 1         62
+[ 5037.742105] mpc-sample mpc-panel-demo[2304]: knob 1         61
+[ 5037.752118] mpc-sample mpc-panel-demo[2304]: knob 1         59
+[ 5037.762173] mpc-sample mpc-panel-demo[2304]: knob 1         58
+[ 5037.772183] mpc-sample mpc-panel-demo[2304]: knob 1         56
+[ 5037.782190] mpc-sample mpc-panel-demo[2304]: knob 1         55
+[ 5037.792248] mpc-sample mpc-panel-demo[2304]: knob 1         53
+[ 5037.802251] mpc-sample mpc-panel-demo[2304]: knob 1         52
+[ 5037.822385] mpc-sample mpc-panel-demo[2304]: knob 1         51
+[ 5037.842489] mpc-sample mpc-panel-demo[2304]: knob 1         50
+[ 5037.872582] mpc-sample mpc-panel-demo[2304]: knob 1         49
+[ 5037.932819] mpc-sample mpc-panel-demo[2304]: knob 1         50
+[ 5037.952882] mpc-sample mpc-panel-demo[2304]: knob 1         51
+[ 5037.962874] mpc-sample mpc-panel-demo[2304]: knob 1         52
+[ 5037.982979] mpc-sample mpc-panel-demo[2304]: knob 1         53
+[ 5037.993065] mpc-sample mpc-panel-demo[2304]: knob 1         54
+[ 5038.003092] mpc-sample mpc-panel-demo[2304]: knob 1         55
+[ 5038.023066] mpc-sample mpc-panel-demo[2304]: knob 1         56
+[ 5038.123403] mpc-sample mpc-panel-demo[2304]: knob 1         57
+[ 5038.153454] mpc-sample mpc-panel-demo[2304]: knob 1         56
+[ 5039.258179] mpc-sample mpc-panel-demo[2304]: 16 LEVELS     down
+[ 5039.258179] mpc-sample mpc-panel-demo[2304]: knob 3         68
+[ 5043.041275] mpc-sample mpc-panel-demo[2304]: pad 5         velocity  72
+[ 5043.049947] mpc-sample mpc-panel-demo[2304]: NOTE REPEAT   down
+[ 5043.397128] mpc-sample mpc-panel-demo[2304]: pad 5         velocity  54
+[ 5044.833676] mpc-sample mpc-panel-demo[2304]: pad 8         velocity  20
+[ 5047.299680] mpc-sample mpc-panel-demo[2304]: pad 8         velocity  31
+[ 5047.885593] mpc-sample mpc-panel-demo[2304]: pad 8         velocity 127
+[ 5048.914088] mpc-sample mpc-panel-demo[2304]: pad 8         velocity  68
+[ 5049.238526] mpc-sample mpc-panel-demo[2304]: pad 8         velocity  46
+[ 5049.545260] mpc-sample mpc-panel-demo[2304]: pad 8         velocity 111
+[ 5049.832604] mpc-sample mpc-panel-demo[2304]: pad 8         velocity 127
+[ 5050.395023] mpc-sample mpc-panel-demo[2304]: pad 11        velocity  31
+[ 5050.722948] mpc-sample mpc-panel-demo[2304]: pad 11        velocity  52
+[ 5051.059250] mpc-sample mpc-panel-demo[2304]: pad 11        velocity  59
+[ 5051.375411] mpc-sample mpc-panel-demo[2304]: pad 11        velocity  81
+[ 5051.648902] mpc-sample mpc-panel-demo[2304]: pad 11        velocity 122
+[ 5052.007101] mpc-sample mpc-panel-demo[2304]: pad 11        velocity 108
+[ 5060.899337] mpc-sample systemd[1]: Stopping /run/mpc-panel-demo...
+[ 5060.993961] mpc-sample systemd[1]: mpc-panel-demo.service: Deactivated successfully.
+[ 5060.994905] mpc-sample systemd[1]: Stopped /run/mpc-panel-demo.

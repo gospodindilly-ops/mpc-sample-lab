@@ -1,0 +1,239 @@
+## ps
+  PID USER       VSZ STAT COMMAND
+    1 root     18784 S    {systemd} /sbin/init
+    2 root         0 SW   [kthreadd]
+    3 root         0 SW   [pool_workqueue_]
+    4 root         0 IW<  [kworker/R-kvfre]
+    5 root         0 IW<  [kworker/R-rcu_g]
+    6 root         0 IW<  [kworker/R-sync_]
+    7 root         0 IW<  [kworker/R-slub_]
+    8 root         0 IW<  [kworker/R-netns]
+    9 root         0 IW   [kworker/0:0-pm]
+   10 root         0 IW<  [kworker/0:0H-kv]
+   11 root         0 IW   [kworker/0:1-pm]
+   12 root         0 IW   [kworker/u16:0-e]
+   13 root         0 IW<  [kworker/R-mm_pe]
+   14 root         0 IW   [rcu_tasks_kthre]
+   15 root         0 IW   [rcu_tasks_trace]
+   16 root         0 SW   [ksoftirqd/0]
+   17 root         0 SW   [ktimers/0]
+   18 root         0 SW<  [pr/legacy]
+   19 root         0 IW   [rcu_preempt]
+   20 root         0 SW   [rcub/0]
+   21 root         0 SW   [rcu_exp_par_gp_]
+   22 root         0 SW   [rcuc/0]
+   23 root         0 SW   [rcu_exp_gp_kthr]
+   24 root         0 SW   [migration/0]
+   25 root         0 SW   [irq_work/0]
+   26 root         0 SW   [cpuhp/0]
+   27 root         0 SW   [cpuhp/1]
+   28 root         0 SW   [irq_work/1]
+   29 root         0 SW   [migration/1]
+   30 root         0 SW   [rcuc/1]
+   31 root         0 SW   [ktimers/1]
+   32 root         0 SW   [ksoftirqd/1]
+   33 root         0 IW   [kworker/1:0-mm_]
+   34 root         0 IW<  [kworker/1:0H-kv]
+   35 root         0 SW   [cpuhp/2]
+   36 root         0 SW   [irq_work/2]
+   37 root         0 SW   [migration/2]
+   38 root         0 SW   [rcuc/2]
+   39 root         0 SW   [ktimers/2]
+   40 root         0 SW   [ksoftirqd/2]
+   41 root         0 IW   [kworker/2:0-cgr]
+   42 root         0 IW<  [kworker/2:0H-kb]
+   43 root         0 SW   [cpuhp/3]
+   44 root         0 SW   [irq_work/3]
+   45 root         0 SW   [migration/3]
+   46 root         0 SW   [rcuc/3]
+   47 root         0 SW   [ktimers/3]
+   48 root         0 SW   [ksoftirqd/3]
+   49 root         0 IW   [kworker/3:0-eve]
+   50 root         0 IW<  [kworker/3:0H-kb]
+   51 root         0 SW   [kdevtmpfs]
+   52 root         0 IW<  [kworker/R-inet_]
+   53 root         0 SW   [kauditd]
+   54 root         0 SW   [oom_reaper]
+   55 root         0 IW   [kworker/u16:1-e]
+   56 root         0 IW<  [kworker/R-write]
+   57 root         0 SW   [kcompactd0]
+   58 root         0 IW<  [kworker/R-kinte]
+   59 root         0 IW<  [kworker/R-kbloc]
+   60 root         0 IW   [kworker/u16:2-e]
+   61 root         0 IW   [kworker/u16:3-e]
+   62 root         0 IW<  [kworker/R-devfr]
+   63 root         0 SW   [backlog_napi/0]
+   64 root         0 SW   [backlog_napi/1]
+   65 root         0 SW   [backlog_napi/2]
+   66 root         0 SW   [backlog_napi/3]
+   67 root         0 SW   [watchdogd]
+   68 root         0 IW   [kworker/1:1-cgr]
+   69 root         0 IW<  [kworker/R-quota]
+   70 root         0 IW<  [kworker/0:1H-kv]
+   71 root         0 IW   [kworker/3:1-cgr]
+   72 root         0 SW   [kswapd0]
+   73 root         0 SW   [irq/19-rockchip]
+   75 root         0 IW   [kworker/1:2-rcu]
+   76 root         0 IW   [kworker/1:3-eve]
+   77 root         0 SW   [irq/20-fe530000]
+   78 root         0 SW   [irq/21-fe530000]
+   79 root         0 SW   [irq/22-fe550000]
+   80 root         0 SW   [irq/23-fe550000]
+   81 root         0 SW<  [pr/ttyS2]
+   82 root         0 SW   [irq/27-fdea0800]
+   83 root         0 SW   [irq/28-fdee0800]
+   84 root         0 SW   [spi3]
+   85 root         0 IW   [kworker/2:1-cgr]
+   86 root         0 IW   [kworker/2:2-rcu]
+   87 root         0 IW   [kworker/2:3-eve]
+   88 root         0 SW   [irq/31-fdd40000]
+   89 root         0 SW   [irq/32-rk817]
+   90 root         0 IW   [kworker/3:2-rcu]
+   91 root         0 IW   [kworker/3:3]
+   92 root         0 SW   [irq/57-fe5b0000]
+   93 root         0 SW   [irq/58-fe5e0000]
+   94 root         0 SW   [irq/59-rtc-pcf8]
+   95 root         0 IW<  [kworker/R-dm_bu]
+   96 root         0 SW   [irq/60-dw-mci]
+   97 root         0 SW   [irq/61-fe720000]
+   98 root         0 SW   [irq/66-fe2b0000]
+   99 root         0 IW<  [kworker/u17:0]
+  100 root         0 IW   [kworker/0:2-eve]
+  101 root         0 IW   [kworker/u16:4-e]
+  102 root         0 IW<  [kworker/R-sdhci]
+  103 root         0 SW   [irq/67-mmc0]
+  104 root         0 SW   [irq/67-s-mmc0]
+  106 root         0 IW<  [kworker/R-mmc_c]
+  109 root         0 IW<  [kworker/R-kdmfl]
+  110 root         0 IW<  [kworker/R-kveri]
+  111 root         0 SW   [irq/24-ttyS2]
+  113 root     15916 S    @usr/bin/az0x-splash normal
+  114 root         0 IW<  [kworker/2:1H-kb]
+  115 root         0 IW<  [kworker/2:2H-kb]
+  116 root         0 IW<  [kworker/2:3H-kb]
+  117 root         0 IW<  [kworker/2:4H-kv]
+  118 root         0 IW<  [kworker/0:2H-kv]
+  119 root         0 IW<  [kworker/1:1H-kv]
+  120 root         0 IW<  [kworker/0:3H-mm]
+  121 root         0 IW<  [kworker/1:2H-kv]
+  122 root         0 IW<  [kworker/1:3H-kv]
+  123 root         0 IW<  [kworker/1:4H-kv]
+  124 root         0 IW<  [kworker/1:5H-kb]
+  125 root         0 IW<  [kworker/1:6H-kv]
+  126 root         0 IW<  [kworker/1:7H-kv]
+  127 root         0 IW<  [kworker/1:8H-kv]
+  128 root         0 IW<  [kworker/1:9H-kv]
+  129 root         0 IW<  [kworker/1:10H-k]
+  130 root         0 IW<  [kworker/1:11H-k]
+  131 root         0 IW<  [kworker/1:12H-k]
+  132 root         0 IW<  [kworker/1:13H-k]
+  133 root         0 IW<  [kworker/3:1H-kb]
+  134 root         0 SW   [jbd2/dm-0-8]
+  135 root         0 IW<  [kworker/R-ext4-]
+  136 root         0 IW<  [kworker/0:4H-kb]
+  137 root         0 IW<  [kworker/0:5H-kv]
+  138 root         0 IW<  [kworker/0:6H-kv]
+  139 root         0 IW<  [kworker/R-mmc_c]
+  140 root         0 IW<  [kworker/R-mld]
+  141 root         0 IW<  [kworker/R-ipv6_]
+  174 root     23360 S    /usr/lib/systemd/systemd-journald
+  215 root     27700 S    /usr/lib/systemd/systemd-udevd
+  241 root         0 SW   [jbd2/mmcblk0p11]
+  242 root         0 IW<  [kworker/R-ext4-]
+  251 root         0 IW<  [kworker/3:2H-kb]
+  260 root         0 SW   [irq/68-fdeb0000]
+  261 root         0 SW   [irq/69-rockchip]
+  262 root         0 SW   [irq/70-Headphon]
+  263 root         0 SW   [irq/71-Line out]
+  272 root         0 IW   [kworker/u16:5-e]
+  279 root         0 SW   [jbd2/mmcblk0p12]
+  280 root         0 IW<  [kworker/R-ext4-]
+  283 root         0 SW   [jbd2/mmcblk0p7-]
+  284 root         0 IW<  [kworker/R-ext4-]
+  293 systemd- 15452 S    /usr/lib/systemd/systemd-resolved
+  294 root         0 IW   [kworker/1:4-eve]
+  295 systemd- 88992 S    /usr/lib/systemd/systemd-timesyncd
+  297 root     14840 S    /usr/lib/systemd/systemd-userdbd
+  299 root     15504 S    systemd-userwork: waiting...
+  300 root     15364 S    systemd-userwork: waiting...
+  301 root     15504 S    systemd-userwork: waiting...
+  304 root      8324 S    /usr/libexec/az01-unsupp-dev
+  305 root     18308 S    /usr/bin/az0x-webserver
+  306 messageb  7044 S    /usr/bin/dbus-daemon --system --address=systemd: --n
+  307 root      5272 S    /sbin/agetty -o -p -- \u --noclear - linux
+  312 systemd- 16664 S    /usr/lib/systemd/systemd-networkd
+  317 root         0 IW<  [kworker/R-cfg80]
+  326 root         0 SW   [irq/30-dwc3]
+  327 root         0 SW   [irq/30-s-dwc3]
+  331 root     13896 S    /usr/sbin/connmand -n
+  332 root      2068 S    /usr/bin/az01-script-runner
+  333 root      635m S    {MPC Sample Main} /usr/bin/MPC Sample
+  337 root     14556 S    /usr/sbin/wpa_supplicant -u
+  348 root     78376 S    /usr/libexec/edisksd
+  349 root         0 SW   [irq/26-ttyS0]
+  370 root         0 SW   [irq/25-ttyS3]
+  392 root      9040 S    sshd: /usr/sbin/sshd -D -e -f /run/mpc-sample-ssh/ss
+  420 root     10724 S    sshd: root@notty
+  422 root      3492 S    sh -c  echo "## ps"; ps echo "## ip"; ip -br addr; i
+  423 root      3624 R    ps
+## ip
+BusyBox v1.36.1 () multi-call binary.
+
+Usage: ip [OPTIONS] address|route|link|tunnel [ARGS]
+BusyBox v1.36.1 () multi-call binary.
+
+Usage: ip [OPTIONS] address|route|link|tunnel [ARGS]
+## free
+              total        used        free      shared  buff/cache   available
+Mem:        2018016      584708     1142592        9048      290716     1249932
+Swap:             0           0           0
+## df
+Filesystem                Size      Used Available Use% Mounted on
+/dev/dm-0               359.5M    337.4M         0 100% /
+devtmpfs                964.4M         0    964.4M   0% /dev
+tmpfs                   985.4M      8.8M    976.5M   1% /run
+tmpfs                   985.4M         0    985.4M   0% /dev/shm
+tmpfs                   985.4M      8.8M    976.5M   1% /etc/machine-id
+tmpfs                   985.4M      8.0K    985.4M   0% /tmp
+tmpfs                   985.4M         0    985.4M   0% /media
+tmpfs                   985.4M      4.0K    985.4M   0% /var/volatile
+tmpfs                   985.4M         0    985.4M   0% /secure-media
+overlay                 985.4M      4.0K    985.4M   0% /var/spool
+overlay                 985.4M      4.0K    985.4M   0% /var/cache
+overlay                 985.4M      4.0K    985.4M   0% /srv
+/dev/mmcblk0p11           2.2G      2.1G         0 100% /content
+/dev/mmcblk0p7           54.7M     54.0K     50.2M   0% /factory
+/dev/mmcblk0p12           1.9G     64.4M      1.7G   4% /data
+/dev/mmcblk0p12           1.9G     64.4M      1.7G   4% /var/lib
+/dev/mmcblk1p1          119.2G     45.8G     73.4G  38% /media/MPC SAMPLE
+## compatible
+inmusic,ac50 inmusic,az07 rockchip,rk3566 
+## tty
+crw-rw----    1 root     dialout     4,  65 Oct 22 03:04 /dev/ttyS1
+crw-rw----    1 root     dialout     4,  66 Oct 22 03:04 /dev/ttyS2
+## wifi
+lo
+usb0
+## dmesg
+head: invalid option -- '4'
+BusyBox v1.36.1 () multi-call binary.
+
+Usage: head [OPTIONS] [FILE]...
+## script-runner
+# /usr/lib/systemd/system/az01-script-runner.service
+[Unit]
+Description=AZ01 script runner service
+Requires=network.target
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/az01-script-runner
+
+[Install]
+WantedBy=multi-user.target
+## factory names
+drwxr-xr-x    3 root     root          1024 Jan 10  2026 .
+drwxr-xr-x   23 root     root          1024 Apr  2  2026 ..
+drwx------    2 root     root         12288 May 29  2025 lost+found
+-rw-r--r--    1 root     root          7252 Jan 11  2026 production-test-app-state.yaml

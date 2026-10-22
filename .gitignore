@@ -1,0 +1,22 @@
+# Never commit vendor firmware, device images, backups or keys
+*.img
+*.bin
+*.rbin
+*.fit
+*.xz
+*.tar
+rootfs/
+payloads/
+emmc-backup-*/
+autorun/
+ssh_host_*
+authorized_keys
+*ed25519*
+
+# Build output
+panel-demo/mpc-panel-demo
+panel-demo/panel-test
+
+__pycache__/
+.pytest_cache/
+.DS_Store

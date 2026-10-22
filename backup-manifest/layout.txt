@@ -1,0 +1,14 @@
+disk_sectors=15269888 sector=512
+mmcblk0p1 start=1088 size=960 PARTNAME=spl1
+mmcblk0p10 start=676864 size=2097152 PARTNAME=rootfs
+mmcblk0p11 start=2774016 size=8388608 PARTNAME=content
+mmcblk0p12 start=11162624 size=4103168 PARTNAME=data
+mmcblk0p2 start=2112 size=960 PARTNAME=spl2
+mmcblk0p3 start=3072 size=1024 PARTNAME=env1
+mmcblk0p4 start=4096 size=1024 PARTNAME=env2
+mmcblk0p5 start=5120 size=8192 PARTNAME=uboot1
+mmcblk0p6 start=13312 size=8192 PARTNAME=uboot2
+mmcblk0p7 start=21504 size=131072 PARTNAME=factory
+mmcblk0p8 start=152576 size=262144 PARTNAME=boot
+mmcblk0p9 start=414720 size=262144 PARTNAME=recovery
+emmc=8GTF4R manfid=0x000015 date=07/2025
