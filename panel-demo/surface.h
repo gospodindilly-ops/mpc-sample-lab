@@ -36,8 +36,8 @@ static inline const char *cc_name(int cc) {
     case 16: return "knob 2";
     case 17: return "knob 3";
     case 18: return "knob 4";
-    case 100: return "fader";
-    case 20: return "encoder";
+    case 100: return "encoder";  // relative: 1..64 = +n, 65..127 = n - 128
+    case 20: return "fader";
     }
     return NULL;
 }
