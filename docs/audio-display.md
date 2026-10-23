@@ -1,3 +1,5 @@
+**Русский** | [English](audio-display.en.md)
+
 # MPC Sample (AC50): звук и экран
 
 Источники: DT из `kernel.fit` прошивки 1.3.0.12 ([`tools/dtdump.py`](../tools/dtdump.py)), rootfs, бинарь `MPC Sample`.

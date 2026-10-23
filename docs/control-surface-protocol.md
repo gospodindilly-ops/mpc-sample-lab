@@ -1,3 +1,5 @@
+**Русский** | [English](control-surface-protocol.en.md)
+
 # MPC Sample (AC50): протокол панели управления
 
 Источник: `/usr/share/Akai/AC50/Firmware/AC50/UpdateImage.rbin` из прошивки 1.3.0.12

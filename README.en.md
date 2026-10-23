@@ -10,10 +10,10 @@ Personal research on the Akai MPC Sample (AC50, firmware 1.3.0.12). Everything a
 
 | Path | What it is |
 |---|---|
-| [docs/control-surface-protocol.md](docs/control-surface-protocol.md) | Control surface protocol: RBIN format, MCU, all pad, button, knob, and LED messages, SysEx. Marked what comes from code and what is verified on the device |
+| [docs/control-surface-protocol.en.md](docs/control-surface-protocol.en.md) | Control surface protocol: RBIN format, MCU, all pad, button, knob, and LED messages, SysEx. Marked what comes from code and what is verified on the device |
 | [firmware/](firmware/) | **Own firmware, phase 1 — Sample Mode following the User Guide:**<br>• 8 banks × 16 pads, 32 voices;<br>• envelopes, tune, mono/poly, mute groups, loop, reverse, Note On;<br>• pages B1–B3, knobs K1–K3, encoder, Pad Volume fader;<br>• LEDs, screen with waveform and envelope.<br>`make test` — self-test on Mac/Linux, `make` — binary for the device |
-| [docs/firmware-roadmap.md](docs/firmware-roadmap.md) | Every User Guide function by phase: what is done, what is next |
-| [docs/audio-display.md](docs/audio-display.md) | Sound (I2S, AK4558, ALSA switches) and screen (SPI ST7796S via DRM) |
+| [docs/firmware-roadmap.en.md](docs/firmware-roadmap.en.md) | Every User Guide function by phase: what is done, what is next |
+| [docs/audio-display.en.md](docs/audio-display.en.md) | Sound (I2S, AK4558, ALSA switches) and screen (SPI ST7796S via DRM) |
 | [sampler/sampler.c](sampler/sampler.c) | A step towards the firmware: 16 WAV files from the SD card on the pads, MAIN VOLUME, real-time audio thread |
 | [sound-test/sound_test.c](sound-test/sound_test.c) | Audio and display test: a tone per pad, pad grid via DRM |
 | [panel-demo/panel.c](panel-demo/panel.c) | First own app: reads the surface, lights the LED of the pressed button, colors the hit pad |
@@ -64,7 +64,7 @@ Reference firmware: `Update.img` 1.3.0.12, SHA-256 in [backup-manifest/update-im
 
 ## Control surface: cheat sheet
 
-Details in [docs/control-surface-protocol.md](docs/control-surface-protocol.md).
+Details in [docs/control-surface-protocol.en.md](docs/control-surface-protocol.en.md).
 - **Pads:** channel 10. `99 note velocity`, then `A9 note pressure` and `89 note 00`. Pad notes 1–16: 37 36 42 82 40 38 46 44 48 47 45 43 49 55 51 53.
 - **Buttons:** channel 1, `90 note 7F` and `80 note 00`. 24 buttons, table in docs, §8.
 - **Knobs:** 1–4 → CC 19, 16, 17, 18. Fader → CC 20 (absolute 0–127). Big encoder → CC 100 (relative: `01` = +1, `7F` = −1).
