@@ -18,6 +18,11 @@ panel-demo/mpc-panel-demo
 panel-demo/panel-test
 sound-test/mpc-sound-test
 sound-test/sound-test-host
+sampler/mpc-sampler
+sampler/sampler-host
+firmware/mpcfw
+firmware/fw-test
+firmware/fw-test.dSYM/
 
 __pycache__/
 .pytest_cache/
