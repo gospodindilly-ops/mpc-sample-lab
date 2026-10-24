@@ -36,4 +36,5 @@ void ui_page_tabs(const struct app *a, struct tab t[3]);  // the mode's current 
 void ui_knobs(const struct app *a, uint32_t *fb, int stride, const struct cell c[3]);  // K1..K3 of the current page
 void ui_wave(uint32_t *fb, int stride, const struct pad *pd, const struct sample *s, int env);  // stereo, with meters
 void ui_shift_icon(uint32_t *fb, int stride, int held);
-void ui_tracks(const struct app *a, uint32_t *fb, int stride, int mute);  // the 16 tracks as the pads; mute: Track Mute
+void ui_tracks(const struct app *a, uint32_t *fb, int stride, int mute);
+void ui_confirm(uint32_t *fb, int stride, const char *question);  // the guide's question: B1 Cancel, B3 Do It!  // the 16 tracks as the pads; mute: Track Mute

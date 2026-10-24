@@ -13,13 +13,22 @@ static void pad(struct app *a, int i, int vel) {
     int n = a->bank * PADS + i;
     if (a->seq_pads) { app_track_mode(a)->pad(a, i, vel); return; }
     if (!vel) return;
-    if (a->erase_held) { seq_clear(s, n), app_popup(a, "Erased Seq %c%02d", 'A' + a->bank, i + 1); return; }
+    if (a->erase_held) {  // asks first, as the piano roll does: a whole sequence is a lot to lose to a slip
+        if (seq_used(s, n)) a->confirm = n;
+        else app_popup(a, "Seq %c%02d is empty", 'A' + a->bank, i + 1);
+        return;
+    }
     if (s->playing) s->next = n == s->cur ? -1 : n;  // takes over at the end of the current one
     else s->cur = n, s->next = -1, seq_locate(s, 0);
 }
 
 static int button(struct app *a, int note, int down) {
     struct sequencer *s = a->sq;
+    if (a->confirm >= 0 && (note == N_B1 || note == N_B3)) {  // B1 Cancel, B3 Do It!
+        if (down && note == N_B3) seq_clear(s, a->confirm), app_popup(a, "Erased Seq %c%02d", 'A' + a->confirm / PADS, a->confirm % PADS + 1);
+        if (down) a->confirm = -1;
+        return 1;
+    }
     if (a->shift || note < N_B1 || note > N_B3) return a->seq_pads && down ? app_track_mode(a)->button(a, note, down) : 0;
     if (note == N_B1) {  // the guide's Sequence BPM window: open while B1 is held
         if ((a->bpm_edit = down)) app_popup(a, "Tempo %.2f", seq_bpm(s));
@@ -68,7 +77,9 @@ static void draw(const struct app *a, uint32_t *fb, int stride) {
     const struct sequencer *s = a->sq;
     char buf[32];
     if (a->mute_mode && !a->seq_pads) { ui_tracks(a, fb, stride, 1); return; }
-    if (a->repeat) {  // Note Repeat on: B1..B3 pick its division, as everywhere
+    if (a->confirm >= 0) {
+        // the question is drawn last, over everything
+    } else if (a->repeat) {  // Note Repeat on: B1..B3 pick its division, as everywhere
         struct tab t[3];
         ui_page_tabs(a, t), ui_tabs(fb, stride, t);
     } else {
@@ -112,6 +123,7 @@ static void draw(const struct app *a, uint32_t *fb, int stride) {
         snprintf(buf, sizeof buf, "%03d", p % beat), ui_text(fb, stride, 263, 156, buf, 1, C_TEXT, UI_W);
     }
 
+    if (a->confirm >= 0) snprintf(buf, sizeof buf, "Erase Seq %c%02d?", 'A' + a->confirm / PADS, a->confirm % PADS + 1), ui_confirm(fb, stride, buf);
     ui_knobs(a, fb, stride, (struct cell[3]){{C_TEXT, -1, 1}, {C_TEXT, -1, 1}, {C_TEXT, -1, 0}});  // values, as the guide
     ui_shift_icon(fb, stride, a->shift);
 }

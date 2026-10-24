@@ -17,7 +17,6 @@ const struct param PARAMS[P_COUNT] = {
     [P_END] = {"End", 0, 100, 0.5f, 100, SHOW_PCT, PADF(end)},
     [P_LOOP] = {"Loop", 0, 100, 0.5f, 100, SHOW_PCT, PADF(loop)},
     [P_VOL] = {"Volume", VOL_MIN_DB, 6, 0.5f, 1, SHOW_DB, PADF(vol_db)},
-    [P_KITVOL] = {"Kit Vol", VOL_MIN_DB, 6, 0.5f, 1, SHOW_DB, .in = IN_TRACK, .at = offsetof(struct track, vol_db)},
     [P_PAN] = {"Pan", -50, 50, 1, 50, SHOW_PAN, PADF(pan), .whole = 1},
     [P_ATTACK] = {"Attack", 0, 127, 1, 1, SHOW_TIME, PADI(attack)},
     [P_DECAY] = {"Decay", 0, 127, 1, 1, SHOW_TIME, PADI(decay)},
@@ -29,7 +28,8 @@ const struct param PARAMS[P_COUNT] = {
     [P_MONO] = {"Polyphony", 0, 1, 1, 1, SHOW_LIST, PADI(mono), .list = {"Poly", "Mono"}},
     [P_MUTEGRP] = {"Mute Group", 0, 16, 1, 1, SHOW_OFF, PADI(mute_group)},
     [P_TTYPE] = {"Type", TRACK_EMPTY, TRACK_MIDI, 1, 1, SHOW_LIST, TRKI(type), .list = {"Empty", "Drum", "Audio", "MIDI"}},
-    [P_TRKVOL] = {"Volume", VOL_MIN_DB, 6, 0.5f, 1, SHOW_DB, .in = IN_TRACK, .at = offsetof(struct track, vol_db)},
+    [P_TRKVOL] = {"Track Vol", VOL_MIN_DB, 6, 0.5f, 1, SHOW_DB, .in = IN_TRACK, .at = offsetof(struct track, vol_db)},  // a Drum
+                                                                                     // track's is the guide's Kit Volume
     [P_MIDIPORT] = {"MIDI Port", PORT_EXTERNAL, PORT_USB, 1, 1, SHOW_LIST, TRKI(midi_port), .list = {"External", "USB"}},
     [P_MIDICH] = {"Channel", 1, 16, 1, 1, SHOW_INT, TRKI(midi_ch)},
     [P_SEQBARS] = {"Bars", 0, 7, 1, 1, SHOW_BARS2, .in = IN_SEQ, .at = offsetof(struct sequence, bars), .is_int = 1},

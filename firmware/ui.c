@@ -15,14 +15,33 @@ void ui_fill(uint32_t *fb, int stride, int x0, int y0, int w, int h, uint32_t c)
 }
 
 // Returns the x after the last glyph. big: 8x16 font, else 6x12.
+static int bit(const unsigned char *g, int r, int col) { return r >= 0 && r < FONT_L_H && col >= 0 && col < 8 && g[r] & (0x80 >> col); }
+
+// 2x with Scale2x (EPX): each pixel becomes four, and a corner of the four takes its neighbours' colour where two of
+// them agree, so curves and diagonals come out smooth instead of in doubled steps.
+static void glyph2x(uint32_t *fb, int stride, int x, int y, const unsigned char *g, uint32_t c) {
+    for (int r = 0; r < FONT_L_H; r++)
+        for (int col = 0; col < FONT_L_W; col++) {
+            int p = bit(g, r, col), A = bit(g, r - 1, col), B = bit(g, r, col + 1), C = bit(g, r, col - 1), D = bit(g, r + 1, col);
+            int e[4] = {C == A && C != D && A != B ? A : p, A == B && A != C && B != D ? B : p,
+                        D == C && D != B && C != A ? C : p, B == D && B != A && D != C ? D : p};
+            for (int q = 0; q < 4; q++) {
+                int px = x + col * 2 + (q & 1), py = y + r * 2 + (q >> 1);
+                if (e[q] && px < UI_W && py >= 0 && py < UI_H) fb[py * stride + px] = c;
+            }
+        }
+}
+
 int ui_text(uint32_t *fb, int stride, int x, int y, const char *s, int big, uint32_t c, int x_max) {
-    int k = big == 2 ? 2 : 1, w = (big ? FONT_L_W : FONT_S_W) * k, h = (big ? FONT_L_H : FONT_S_H) * k;
+    int w = big ? FONT_L_W : FONT_S_W, h = big ? FONT_L_H : FONT_S_H;
+    if (big == 2) w *= 2;
     for (; *s && x + w <= x_max; s++, x += w) {
         int ch = (unsigned char)*s;
         const unsigned char *g = big ? FONT_L[(ch < 32 || ch > 126 ? '?' : ch) - 32] : FONT_S[(ch < 32 || ch > 126 ? '?' : ch) - 32];
+        if (big == 2) { glyph2x(fb, stride, x, y, g, c); continue; }
         for (int r = 0; r < h; r++)
             for (int col = 0; col < w; col++)
-                if (g[r / k] & (0x80 >> col / k) && y + r >= 0 && y + r < UI_H) fb[(y + r) * stride + x + col] = c;
+                if (g[r] & (0x80 >> col) && y + r >= 0 && y + r < UI_H) fb[(y + r) * stride + x + col] = c;
     }
     return x;
 }
@@ -270,6 +289,14 @@ void ui_tracks(const struct app *a, uint32_t *fb, int stride, int mute) {
         ui_text(fb, stride, x + 5, y + 18, PARAMS[P_TTYPE].list[type], 1, fg, x + 54);
     }
     if (!mute) ui_knobs(a, fb, stride, (struct cell[3]){{C_TEXT, -1, 0}, {C_TEXT, -1, 0}, {C_TEXT, -1, 0}});
+}
+
+void ui_confirm(uint32_t *fb, int stride, const char *question) {  // drawn over the screen; the mode leaves the tabs empty
+    static const struct tab t[3] = {{"Cancel", 0, 0, 0}, {"", 0, 0, 0}, {"Do It!", 1, 0, 0}};
+    int w = (int)strlen(question) * FONT_L_W + 24, x = (UI_W - w) / 2;
+    ui_tabs(fb, stride, t);
+    ui_fill(fb, stride, x, 106, w, 34, C_TEXT), ui_fill(fb, stride, x + 1, 107, w - 2, 32, 0x2a2a2a);
+    ui_text(fb, stride, x + 12, 115, question, 1, C_TEXT, x + w);
 }
 
 void ui_draw(const struct app *a, uint32_t *fb, int stride) {

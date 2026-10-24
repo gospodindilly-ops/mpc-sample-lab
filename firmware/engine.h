@@ -7,7 +7,8 @@
 #define TRACKS 16
 #define BANKS 8
 #define PADS 16
-#define VOICES 32
+#define VOICES 32  // sounding at once, as the stock firmware
+#define SLOTS (VOICES + 8)  // and room for stolen voices to fade out
 #define VOL_MIN_DB (-75.0f)  // this value and below means -INF
 
 // One decoded sample, interleaved stereo -1..1. Allocated once together with its length and never changed, so
@@ -58,7 +59,7 @@ struct voice {
 
 struct engine {
     struct track tracks[TRACKS];
-    struct voice voices[VOICES];
+    struct voice voices[SLOTS];
     float master;                  // MAIN VOLUME gain 0..1
     float gain;                    // master as heard: follows it smoothly; < 0 before the first render
     float peak;                    // loudest output sample of the last render, for the level meter

@@ -38,7 +38,7 @@ static void run_job(void) {  // what the file thread and the audio loop do for o
 }
 
 static float level(int f, int ch) { return out[2 * f + ch] / 2147483520.0f; }
-static int voices(void) { int n = 0; for (int i = 0; i < VOICES; i++) n += e.voices[i].active; return n; }
+static int voices(void) { int n = 0; for (int i = 0; i < SLOTS; i++) n += e.voices[i].active; return n; }
 static void midi(int s, int d1, int d2) { unsigned char m[3] = {s, d1, d2}; app_midi(&a, m); }
 static void press(int note) { midi(0x90, note, 127), midi(0x80, note, 0); }
 static void blocks(int n) { while (n--) app_tick(&a, 128), engine_render(&e, out, 128); }  // the audio loop
@@ -151,6 +151,21 @@ static void engine_tests(void) {
     engine_stop_all(&e), engine_render(&e, out, 600);
     free(t2->smp), free(t2b->smp), t2->smp = t2b->smp = NULL, e.tracks[1].type = TRACK_EMPTY;
     free(e.tracks[0].pads[0][0].smp), e.tracks[0].pads[0][0].smp = NULL;
+
+    engine_init(&e), e.master = 1;  // the 33rd voice: the oldest of 32 fades out in its slot instead of being cut
+    for (int i = 0; i < 40; i++) load(i / PADS, i % PADS, 4000, 0.01f), e.tracks[0].pads[i / PADS][i % PADS].p.loop_on = 1;
+    for (int i = 0; i < 32; i++) engine_trigger(&e, 0, i / PADS, i % PADS, 127), engine_render(&e, out, 4);
+    assert(voices() == 32);
+    engine_trigger(&e, 0, 2, 0, 127);
+    int fading = 0;
+    for (int i = 0; i < SLOTS; i++) fading += e.voices[i].active && e.voices[i].fade;
+    assert(voices() == 33 && fading == 1 && e.voices[0].fade);
+    engine_render(&e, out, 300);  // FADE is 256 frames
+    assert(voices() == 32);
+    for (int i = 33; i < 40; i++) engine_trigger(&e, 0, i / PADS, i % PADS, 127);  // more at once: never past the slots
+    assert(voices() <= SLOTS);
+    engine_stop_all(&e), engine_render(&e, out, 300);
+    for (int i = 0; i < 40; i++) free(e.tracks[0].pads[i / PADS][i % PADS].smp), e.tracks[0].pads[i / PADS][i % PADS].smp = NULL;
     puts("engine ok");
 }
 
@@ -221,7 +236,7 @@ static void app_tests(const char *shot) {
     press(12);  // B1 again: TRIM -> MIX; SHIFT+K2 is Kit Volume
     assert(a.page[0] == 1 && page_param(&a, 0) == P_VOL);
     midi(0x90, 49, 127);
-    assert(page_param(&a, 1) == P_KITVOL);
+    assert(page_param(&a, 1) == P_TRKVOL);
     midi(0x80, 49, 0);
 
     midi(0xB0, 20, 127);  // fader CC20 (Pad Volume, Pickup): does nothing until it crosses the current value
@@ -409,6 +424,15 @@ static void app_tests(const char *shot) {
     assert(sq.cur == 5 && sq.next == -1);
     press(81), sq.cur = 2;
 
+    midi(0x90, 9, 127), midi(0x99, 38, 100), midi(0x89, 38, 0), midi(0x80, 9, 0);  // ERASE + pad 6 asks before erasing A06
+    assert(a.confirm == 5 && seq_used(&sq, 5));
+    press(12);  // B1: Cancel
+    assert(a.confirm == -1 && seq_used(&sq, 5));
+    midi(0x90, 9, 127), midi(0x99, 38, 100), midi(0x89, 38, 0), midi(0x80, 9, 0), press(14);  // B3: Do It!
+    assert(!seq_used(&sq, 5) && a.confirm == -1);
+    midi(0x90, 9, 127), midi(0x99, 38, 100), midi(0x89, 38, 0), midi(0x80, 9, 0);  // an empty one: nothing to ask
+    assert(a.confirm == -1 && strstr(a.popup, "empty"));
+
     press(6), press(11);  // Sample Mode; NOTE REPEAT tapped: latched on; B2: 1/16, a hit every 5512 frames
     assert(a.mode == &SAMPLE_MODE && a.repeat);
     press(13);
@@ -474,6 +498,12 @@ static void app_tests(const char *shot) {
     assert(a.confirm == -1 && seq_holds(&sq, 3, 0, n1));
     midi(0x90, 9, 127), midi(0x99, 36, 100), midi(0x89, 36, 0), midi(0x80, 9, 0), press(14);  // B3: Do It!
     assert(!seq_used(&sq, 3) && a.confirm == -1);
+    a.roll_zoom = 0, a.pad = 0;  // a note longer than the page also shows on the next page, where it still sounds
+    sq.ev[seq_add(&sq, 3, 0, 0, 0, 100)].len = 2 * 4 * PPQ, a.roll_tick = 4 * PPQ;
+    static uint32_t page[UI_W * UI_H];
+    ui_draw(&a, page, UI_W);
+    assert(page[(53 + 15 * 9 + 3) * UI_W + 30 + 5] != 0x1c1c1c && page[(53 + 15 * 9 + 3) * UI_W + 30 + 5] != C_BG);  // row 1, left
+    seq_clear(&sq, 3), a.roll_tick = 480, a.pad = 2;
     press(13);  // B2: zoom 2 bars
     assert(a.roll_zoom == 1);
     midi(0x90, 6, 127), midi(0xB0, 100, 1), midi(0x80, 6, 0);  // SAMPLE + encoder picks a track and comes back here
@@ -512,6 +542,7 @@ static void app_tests(const char *shot) {
         sq.cur = 2, sq.pos = 2 * PPQ + 561, sq.rec_quant = 1, sq.next = 5;
         seq_add(&sq, 2, 0, 0, 0, 100), a.mode = &SEQ_MODE, a.sel = 0, snap(shot, "seq");
         sq.playing = sq.recording = 1, a.shift = 1, snap(shot, "seq-rec"), sq.playing = sq.recording = 0, a.shift = 0;
+        a.confirm = 2, snap(shot, "seq-erase"), a.confirm = -1;
         e.tracks[2].muted = 1, a.mute_mode = 1, snap(shot, "trackmute"), a.mute_mode = 0;
         a.mode = &SAMPLE_MODE, a.repeat = 1, snap(shot, "repeat"), a.repeat = 0;
         seq_clear(&sq, 3), sq.cur = 3, sq.seqs[3].bars = 2, sq.q = 4, sq.next = -1;  // a two-bar beat in the piano roll

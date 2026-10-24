@@ -31,43 +31,49 @@ float env_seconds(int v) { return v <= 0 ? 0 : 0.001f * powf(10000, v / 127.0f);
 static int voice_of(const struct voice *v, const struct pad *pd) { return v->active && v->pad == pd; }
 
 int engine_playing(const struct engine *e, int t, int bank, int pad) {
-    for (int i = 0; i < VOICES; i++)
+    for (int i = 0; i < SLOTS; i++)
         if (voice_of(&e->voices[i], &e->tracks[t].pads[bank][pad]) && !e->voices[i].fade) return 1;
     return 0;
 }
 
 void engine_stop(struct engine *e, int t, int bank, int pad) {
-    for (int i = 0; i < VOICES; i++)
+    for (int i = 0; i < SLOTS; i++)
         if (voice_of(&e->voices[i], &e->tracks[t].pads[bank][pad]) && !e->voices[i].fade) e->voices[i].fade = FADE;
 }
 
 void engine_kill(struct engine *e, int t, int bank, int pad) {
-    for (int i = 0; i < VOICES; i++)
+    for (int i = 0; i < SLOTS; i++)
         if (voice_of(&e->voices[i], &e->tracks[t].pads[bank][pad])) e->voices[i].active = 0;
 }
 
 void engine_stop_all(struct engine *e) {
-    for (int i = 0; i < VOICES; i++)
+    for (int i = 0; i < SLOTS; i++)
         if (e->voices[i].active && !e->voices[i].fade) e->voices[i].fade = FADE;
 }
 
 void engine_stop_track(struct engine *e, int t) {
-    for (int i = 0; i < VOICES; i++)
+    for (int i = 0; i < SLOTS; i++)
         if (e->voices[i].active && e->voices[i].track == t && !e->voices[i].fade) e->voices[i].fade = FADE;
 }
 
 void engine_release(struct engine *e, int t, int bank, int pad) {
-    for (int i = 0; i < VOICES; i++)
+    for (int i = 0; i < SLOTS; i++)
         if (voice_of(&e->voices[i], &e->tracks[t].pads[bank][pad])) e->voices[i].released = 1;
 }
 
+// With 32 voices sounding, the oldest makes room by fading out (FADE frames) in its slot while the new one takes a
+// spare slot, so stealing does not click. Only with every slot busy is the quietest fading voice cut.
 static struct voice *alloc_voice(struct engine *e) {
-    struct voice *oldest = &e->voices[0];
-    for (int i = 0; i < VOICES; i++) {
-        if (!e->voices[i].active) return &e->voices[i];
-        if (e->voices[i].age < oldest->age) oldest = &e->voices[i];
+    struct voice *free_ = NULL, *oldest = NULL, *quietest = NULL;
+    int sounding = 0;
+    for (int i = 0; i < SLOTS; i++) {
+        struct voice *v = &e->voices[i];
+        if (!v->active) free_ = free_ ? free_ : v;
+        else if (v->fade) quietest = !quietest || v->fade < quietest->fade ? v : quietest;
+        else sounding++, oldest = !oldest || v->age < oldest->age ? v : oldest;
     }
-    return oldest;  // shortcut: stealing cuts the oldest voice without a fade; add spare fade slots if it clicks
+    if (sounding >= VOICES) oldest->fade = FADE;
+    return free_ ? free_ : quietest;
 }
 
 void engine_trigger(struct engine *e, int t, int bank, int idx, int velocity) { engine_trigger_at(e, t, bank, idx, velocity, 0); }
@@ -85,7 +91,7 @@ void engine_trigger_at(struct engine *e, int t, int bank, int idx, int velocity,
         engine_stop(e, t, bank, idx);
         return;
     }
-    for (int i = 0; i < VOICES; i++) {
+    for (int i = 0; i < SLOTS; i++) {
         struct voice *v = &e->voices[i];
         if (!v->active || v->fade || v->track != t) continue;
         int same = v->pad == pd;
@@ -168,7 +174,7 @@ void engine_render(struct engine *e, int32_t *out, int frames) {
     for (int f = 0; f < frames; f++) {
         float l = 0, r = 0;
         for (int k = 0; k < nm; k++) tg[moving[k]] += (tt[moving[k]] - tg[moving[k]]) * GAIN_K;
-        for (int i = 0; i < VOICES; i++)
+        for (int i = 0; i < SLOTS; i++)
             if (e->voices[i].active && !voice_tick(&e->voices[i], &l, &r, tg[e->voices[i].track])) e->voices[i].active = 0;
         if (e->click_env > 0) {  // ~25 ms: decays by 1/e every 5 ms
             if (e->click_wait) e->click_wait--;

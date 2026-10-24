@@ -95,7 +95,7 @@ static void draw(const struct app *a, uint32_t *fb, int stride) {
 
 const struct mode SAMPLE_MODE = {
     .pages = {{{"Trim", {P_START, P_END, P_LOOP}, {0}},
-               {"Mix", {P_VOL, P_NONE, P_PAN}, {P_NONE, P_KITVOL, P_NONE}},
+               {"Mix", {P_VOL, P_NONE, P_PAN}, {P_NONE, P_TRKVOL, P_NONE}},
                {"Amp Env", {P_ATTACK, P_DECAY, P_VELSENS}, {P_NONE, P_DECAYFROM, P_NONE}}},
               {{"Tune", {P_SEMI, P_FINE, P_NONE}, {0}}, {"Play", {P_MONO, P_MUTEGRP, P_NONE}, {0}}},
               {{"Filter", {0}, {0}}, {"Filt Env", {0}, {0}}}},  // phase 2: empty pages say "later"

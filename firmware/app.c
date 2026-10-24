@@ -42,7 +42,7 @@ const struct mode *app_track_mode(const struct app *a) {
 
 static void set_mode(struct app *a, const struct mode *m) {  // pages start over: modes have different page groups
     if (a->mode == m) return;
-    a->mode = m, a->group = a->sel = 0, a->touched = -1;
+    a->mode = m, a->group = a->sel = 0, a->touched = a->confirm = -1;  // an unanswered question goes with its screen
     a->page[0] = a->page[1] = a->page[2] = 0;
 }
 

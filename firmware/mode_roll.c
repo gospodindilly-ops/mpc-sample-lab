@@ -139,9 +139,9 @@ static void draw(const struct app *a, uint32_t *fb, int stride) {
     int bottom = GY + PADS * RH - 2;
 #define X(t) (GX + (int)(((t) - view) * GW / span))
 
-    struct tab t[3] = {{"Cancel", 0, 0, 0}, {"", 0, 0, 0}, {"Do It!", 1, 0, 0}};
+    struct tab t[3];
     if (a->confirm >= 0) {
-        ui_tabs(fb, stride, t);
+        // the question is drawn last, over the grid
     } else if (a->repeat) {
         ui_page_tabs(a, t), ui_tabs(fb, stride, t);
     } else {  // as the guide's Step Edit: tempo left, Erase right; the zoom ours
@@ -182,9 +182,9 @@ static void draw(const struct app *a, uint32_t *fb, int stride) {
     }
     for (int32_t i = head(a); i >= 0; i = s->ev[i].next) {  // the notes: velocity colour, the selected one white
         const struct event *ev = &s->ev[i];
-        if (ev->key / PADS != a->bank || ev->tick < view || ev->tick >= view + span) continue;
-        long end = (long)ev->tick + ev->len < view + span ? (long)ev->tick + ev->len : view + span;
-        int x0 = X(ev->tick), x1 = X(end);
+        long start = ev->tick, end = start + ev->len;
+        if (ev->key / PADS != a->bank || start >= view + span || end <= view) continue;  // also notes from an earlier page
+        int x0 = X(start > view ? start : view), x1 = X(end < view + span ? end : view + span);
         int now = step >= 0 && (((long)ev->tick >= step && (long)ev->tick < step + q) ||  // hit on the playing step,
                                 ((long)ev->tick <= play && play < (long)ev->tick + ev->len));  // or still sounding
         ui_fill(fb, stride, x0, GY + (PADS - 1 - ev->key % PADS) * RH, x1 - x0 > 2 ? x1 - x0 : 2, RH - 1,
@@ -199,9 +199,7 @@ static void draw(const struct app *a, uint32_t *fb, int stride) {
     if (a->confirm >= 0) {
         char what[8];
         row_label(tr, a->confirm, what, sizeof what), snprintf(buf, sizeof buf, "Erase all %s notes?", what);
-        int w = (int)strlen(buf) * 8 + 24, x = (UI_W - w) / 2;
-        ui_fill(fb, stride, x, 106, w, 34, C_TEXT), ui_fill(fb, stride, x + 1, 107, w - 2, 32, 0x2a2a2a);
-        ui_text(fb, stride, x + 12, 115, buf, 1, C_TEXT, x + w);
+        ui_confirm(fb, stride, buf);
     }
 #undef X
     ui_knobs(a, fb, stride, (struct cell[3]){{C_TEXT, -1, 1}, {C_TEXT, -1, 1}, {C_RED, -1, 0}});  // velocity red, as the guide
